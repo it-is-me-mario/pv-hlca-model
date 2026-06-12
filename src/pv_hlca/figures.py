@@ -351,7 +351,7 @@ def _onestep_panel(ax, df, region, act_map, com_map):
 
     ax.set_xticks(x); ax.set_xticklabels(_ONESTEP_LABELS, rotation=40, ha="right")
     ax.set_ylim(0, 100); ax.margins(x=0.02)
-    ax.set_title(f"{region}  (Solar total: {absol.get('Solar Power Plant', float('nan')):.1f} "
+    ax.set_title(f"{region}  (Solar electricity total: {absol.get('Solar Power Plant', float('nan')):.1f} "
                  f"gCO₂eq/kWh)", fontweight="bold", fontsize=10)
 
 
