@@ -1,0 +1,42 @@
+# Paths for the PV-HLCA reproducible pipeline.
+# Relative paths are resolved against the repo root (folder containing this repo).
+
+# --- Base hybrid-units MRIO (EXIOBASE + H2 + green steel), pre-aggregation ---
+# Zenodo record 18744457 (https://zenodo.org/records/18744457).
+# Download the SUT coefficient parquet files (z, v, e, Y, EY, units) into this folder.
+# This folder is git-ignored (large); fetch it from Zenodo on a fresh checkout.
+base_db:
+  path: "inputs/db_from_zenodo"
+  table: "SUT"
+  mode: "coefficients"
+  zenodo: "https://zenodo.org/records/18744457"
+
+# --- Input data files (shipped in data/) ---
+data:
+  aggregation: "data/Aggregate_VA_SA_and_regions.xlsx"
+  add_sectors: "data/Add_sectors.xlsx"
+  activity_mapping: "data/Mapping_activities.xlsx"
+  capacity_factor_rn: "data/capacity_factor_renewables_ninja.xlsx"
+  owid_capacity_generation: "data/owid_solar_capacity_generation_frozen.csv"
+  capacity_factor_multipliers_owid: "data/capacity_factor_multipliers_OWID_frozen.csv"
+  capacity_factor_multipliers_rn: "data/capacity_factor_multipliers_RN_frozen.csv"
+  # Optional, machine-specific (absolute): raw EXIOBASE 3.3.18 hybrid SUT folder used
+  # for the top-down benchmark. If absent/unreachable the top-down step is skipped.
+  exiobase_raw: "/Users/lorenzorinaldi/Library/CloudStorage/OneDrive-SharedLibraries-PolitecnicodiMilano/DENG-SESAM - Documenti/c-Research/a-Datasets/_Input Output Databases/EXIOBASE/3.3.18"
+
+# --- Config files ---
+config:
+  parameters: "config/parameters.yaml"
+  mappings: "config/mappings.yaml"
+  import_structure: "config/import_structure.csv"
+  scenario_2030: "config/scenario_2030.yaml"
+  capacity_factor_row: "config/capacity_factor_row.yaml"
+
+# --- Reference (published thesis results, for validation) ---
+reference:
+  footprints_dir: "reference"               # per-region CSVs (new_solar_footprints_*, Solar_p_*)
+  results_full: "../Tesi/Results"           # large Results*.xlsx (f_dis/p_dis/X/V/E) — local only
+
+# --- Outputs ---
+outputs:
+  dir: "outputs"

@@ -1,0 +1,51 @@
+# 2030 electricity-generation mix by region, as a *sensitivity parameter*.
+# Two sources are provided (mirroring the capacity-factor RN/OWID choice):
+#   EMBER     - Ember "New Generation 2022" stated-policy (EU27 only; thesis original)
+#   WEO_STEPS - IEA World Energy Outlook 2025, Stated Policies Scenario, 2030 values
+#               linearly interpolated between the 2024 and 2035 free-dataset points.
+#
+# Categories match the model's electricity commodities. Shares sum to 1.
+# NOTE: the WEO free dataset reports Solar PV, Wind, Coal, Gas, Nuclear and an
+# aggregate "Renewables"; Hydro / Bioenergy / Other Renewables are split from the
+# (Renewables - Solar - Wind) remainder using each region's current structure, and
+# Other Fossil is the oil residual. These three are therefore approximate.
+
+household_demand_constant: 1656000   # 460 * 3600, EU-calibrated final-demand bump (thesis)
+
+electricity_mix_2030:
+
+  EMBER:
+    _source: "Ember, New Generation 2022 (stated policy). https://ember-energy.org/app/uploads/2022/06/Report-New-Generation-23.06.22.pdf"
+    EU27:
+      Wind: 0.22
+      Coal: 0.02
+      Bioenergy: 0.05
+      Gas: 0.14
+      Hydro: 0.16
+      Nuclear: 0.20
+      Other Fossil: 0.01
+      Other Renewables: 0.04
+      Solar: 0.16
+
+  WEO_STEPS:
+    _source: "IEA World Energy Outlook 2025, Stated Policies Scenario; 2030 interpolated 2024->2035 (Annex A free dataset)."
+    EU27:
+      Coal: 0.044
+      Gas: 0.090
+      Other Fossil: 0.013
+      Nuclear: 0.195
+      Solar: 0.199
+      Wind: 0.287
+      Hydro: 0.110
+      Bioenergy: 0.034
+      Other Renewables: 0.028
+    CN:
+      Coal: 0.398
+      Gas: 0.031
+      Other Fossil: 0.002
+      Nuclear: 0.056
+      Solar: 0.235
+      Wind: 0.150
+      Hydro: 0.105
+      Bioenergy: 0.017
+      Other Renewables: 0.006

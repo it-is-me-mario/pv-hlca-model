@@ -1,0 +1,2 @@
+inputs/db_from_zenodo/Database[[:space:]]analysis[[:space:]]|[[:space:]]Domestic[[:space:]]share[[:space:]]of[[:space:]]activities'[[:space:]]carbon[[:space:]]footprints.zip filter=lfs diff=lfs merge=lfs -text
+inputs/db_from_zenodo/z.parquet filter=lfs diff=lfs merge=lfs -text

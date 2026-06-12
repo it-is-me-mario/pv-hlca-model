@@ -1,0 +1,5 @@
+capacity_factor,electricity_mix,module_efficiency,upstream_reshoring,degradation_rate,lci_variant,scenario,EU27_value_added_Meur,global_co2eq
+OWID,WEO_STEPS,0.24,,0.0,IEA,baseline,11131187.020493299,35081938228.35827
+OWID,WEO_STEPS,0.24,,0.0,IEA,NZIA,11155544.656510416,33799837120.24798
+OWID,WEO_STEPS,0.24,,0.0,IEA,baseline_2030,11152249.901009817,33800913342.959686
+OWID,WEO_STEPS,0.24,,0.0,IEA,domestic,11137804.647099167,35074813557.98879

@@ -1,0 +1,7 @@
+# Rest-of-World capacity factors (estimated from Renewables Ninja), OWID path
+capacity_factor_RoW:
+  WA: 0.168
+  WE: 0.129
+  WF: 0.203
+  WL: 0.185
+  WM: 0.212

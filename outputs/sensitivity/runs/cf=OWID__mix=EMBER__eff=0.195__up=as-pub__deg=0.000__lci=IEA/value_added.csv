@@ -1,0 +1,353 @@
+capacity_factor,electricity_mix,module_efficiency,upstream_reshoring,degradation_rate,lci_variant,scenario,factor,region,value_added
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,AU,530366.8407348833
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,BR,844799.808711538
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,CA,665801.2130305346
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,CH,272894.3410821782
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,CN,2692382.8805204723
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,EU27,5948862.013054459
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,GB,1096624.7803081188
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,ID,191338.29897204993
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,IN,644505.9362350305
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,JP,2229665.1321858284
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,KR,399723.1759856858
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,MX,237608.1838496391
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,NO,161067.34154765887
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,RU,610087.3804981719
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,TR,216318.9333504012
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,US,6146264.369837785
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,WA,1112113.6437134407
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,WE,155229.51159776677
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,WF,493299.77270670584
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,WL,815704.6887132353
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,WM,860223.3862955796
+OWID,EMBER,0.195,,0.0,IEA,baseline,Compensation of employees,ZA,116521.7112056327
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,AU,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,BR,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,CA,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,CH,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,CN,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,EU27,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,GB,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,ID,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,IN,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,JP,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,KR,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,MX,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,NO,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,RU,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,TR,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,US,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,WA,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,WE,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,WF,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,WL,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,WM,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,None,ZA,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,AU,234450.81492407314
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,BR,417767.3389500011
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,CA,235160.88071428693
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,CH,89701.99098614913
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,CN,781069.8228365548
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,EU27,1816818.1556369283
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,GB,235234.44153335405
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,ID,68569.19300425136
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,IN,256233.97084317965
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,JP,774131.294693654
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,KR,119881.13288534782
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,MX,286835.7197565953
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,NO,46398.96840263719
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,RU,288669.58468668436
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,TR,67075.77091546239
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,US,2176799.3940988495
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WA,155544.83733257806
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WE,20974.08765721364
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WF,105551.82424028654
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WL,170507.06305104386
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WM,196278.39362651517
+OWID,EMBER,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,ZA,80523.09857925412
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",AU,296411.2636556393
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",BR,545572.2121843554
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",CA,391994.58295765694
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",CH,132195.5890264684
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",CN,2208868.7165618637
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",EU27,3365745.3178309747
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",GB,528438.8569352672
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",ID,356372.2329926032
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",IN,449116.9446419733
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",JP,1118965.210681198
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",KR,324885.10316122073
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",MX,307563.91686865705
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",NO,101554.4526939511
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",RU,360257.1662354228
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",TR,268215.7736587181
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",US,2724198.39673312
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WA,649951.1805951355
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WE,80115.8991508477
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WF,416759.7096210005
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WL,609571.2279520637
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WM,849562.5366360096
+OWID,EMBER,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",ZA,91889.15775784524
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,AU,530380.669990196
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,BR,844827.6322952945
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,CA,665938.9522436659
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,CH,273134.3177269277
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,CN,2692584.9337907224
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,EU27,5955669.409641269
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,GB,1096628.5822544268
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,ID,191349.779485984
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,IN,644532.4719576469
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,JP,2229708.7319475156
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,KR,399868.46252618026
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,MX,237612.07721792033
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,NO,161086.52506575876
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,RU,610016.2987477717
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,TR,216333.3155960948
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,US,6146483.632976154
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,WA,1112369.6864053446
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,WE,155233.53385257057
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,WF,493344.70264381176
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,WL,815658.73145008
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,WM,860253.3826824968
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Compensation of employees,ZA,116539.15105395972
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,AU,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,BR,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,CA,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,CH,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,CN,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,EU27,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,GB,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,ID,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,IN,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,JP,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,KR,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,MX,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,NO,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,RU,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,TR,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,US,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,WA,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,WE,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,WF,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,WL,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,WM,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,None,ZA,0.0
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,AU,234468.76720527487
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,BR,417790.97944752726
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,CA,235337.05251738784
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,CH,89818.20160823231
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,CN,781165.4356486266
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,EU27,1827366.9431402404
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,GB,235251.45975762888
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,ID,68575.00131590059
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,IN,256242.70796877999
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,JP,774146.8471273838
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,KR,119956.18967034834
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,MX,286837.9985019786
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,NO,46408.53292481715
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,RU,288562.08986513293
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,TR,67079.9297345979
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,US,2176915.3994245213
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WA,155565.63626115047
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WE,20972.631514160228
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WF,105550.20645169933
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WL,170502.9473126294
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WM,196231.09827359248
+OWID,EMBER,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,ZA,80548.26254616478
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",AU,296419.12505977956
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",BR,545611.2973167665
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",CA,392134.18832542823
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",CH,132284.96979842774
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",CN,2209262.752990697
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",EU27,3373154.403186391
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",GB,528372.2367813543
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",ID,356381.6238268926
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",IN,449131.39335356443
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",JP,1118980.5481326182
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",KR,325108.63645848463
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",MX,307532.726305284
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",NO,101565.46002236333
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",RU,360050.00582624256
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",TR,268229.3691395548
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",US,2724302.4522892353
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WA,649956.5100831962
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WE,80075.81955582318
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WF,416721.96571160766
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WL,609537.8598376199
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WM,849193.2533616519
+OWID,EMBER,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",ZA,91914.17248217088
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,AU,530383.8650771518
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,BR,844824.0176444703
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,CA,665878.1795632021
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,CH,272963.84071833745
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,CN,2693409.6119703576
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,EU27,5954044.76882518
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,GB,1096637.2489576715
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,ID,191349.30493631394
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,IN,644526.6684498544
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,JP,2229716.4451036835
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,KR,399840.41066850856
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,MX,237611.63068542132
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,NO,161073.96798026882
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,RU,609992.1267055651
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,TR,216328.60239579936
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,US,6146403.981106037
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WA,1112321.3692828775
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WE,155223.27592915655
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WF,493333.12623533676
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WL,815652.2785896262
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WM,860226.3244278049
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Compensation of employees,ZA,116537.6711578003
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,AU,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,BR,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,CA,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,CH,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,CN,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,EU27,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,GB,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,ID,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,IN,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,JP,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,KR,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,MX,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,NO,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,RU,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,TR,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,US,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,WA,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,WE,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,WF,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,WL,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,WM,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,None,ZA,0.0
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,AU,234475.409772894
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,BR,417787.81552295474
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,CA,235251.871498461
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,CH,89730.3877671547
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,CN,781490.1568950299
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,EU27,1826768.8550344023
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,GB,235278.75349601288
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,ID,68574.83722301664
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,IN,256240.37207261668
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,JP,774149.7426600821
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,KR,119939.20021230934
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,MX,286836.2145977639
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,NO,46401.177552591755
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,RU,288539.5871461744
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,TR,67078.66385490348
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,US,2176862.3528269758
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WA,155560.7256421569
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WE,20970.5064928792
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WF,105546.65227541616
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WL,170500.27056962895
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WM,196224.91703911993
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,ZA,80546.09965205054
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",AU,296424.9380876283
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",BR,545606.4211257694
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",CA,392065.6723867022
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",CH,132224.51004730258
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",CN,2210968.9713421487
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",EU27,3372108.5302959755
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",GB,528376.5455772881
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",ID,356380.5791896106
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",IN,449126.649683026
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",JP,1118984.0654799836
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",KR,325066.09343139175
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",MX,307530.75821373943
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",NO,101548.61873229347
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",RU,360031.23848728143
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",TR,268226.9843460547
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",US,2724263.2141792895
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WA,649941.715815164
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WE,80068.61763990733
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WF,416704.4193877467
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WL,609527.0305167311
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WM,849159.984820404
+OWID,EMBER,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",ZA,91912.04452875382
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,AU,530505.8762315378
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,BR,845242.5378423361
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,CA,666200.9572617805
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,CH,273591.8045423284
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,CN,2688344.2614535834
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,EU27,5952803.125039581
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,GB,1096974.7323390816
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,ID,191021.55524550966
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,IN,644922.890859042
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,JP,2230668.6383217294
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,KR,399577.47793767374
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,MX,237668.28702243321
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,NO,161109.5067892723
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,RU,610155.9425242577
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,TR,216404.7549546189
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,US,6148821.131565302
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,WA,1111420.1844266662
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,WE,155261.93539050294
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,WF,493354.05582392245
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,WL,815924.7188913057
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,WM,860305.9365082117
+OWID,EMBER,0.195,,0.0,IEA,domestic,Compensation of employees,ZA,116620.74818254294
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,AU,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,BR,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,CA,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,CH,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,CN,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,EU27,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,GB,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,ID,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,IN,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,JP,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,KR,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,MX,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,NO,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,RU,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,TR,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,US,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,WA,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,WE,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,WF,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,WL,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,WM,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,None,ZA,0.0
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,AU,234608.9713813362
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,BR,418180.98122627946
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,CA,235672.27297242646
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,CH,90079.9578757383
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,CN,779404.2342415076
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,EU27,1818643.016913466
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,GB,235446.16162782614
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,ID,68348.39275000805
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,IN,256400.87453031066
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,JP,774942.0360381949
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,KR,119827.69816659935
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,MX,287055.7970415451
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,NO,46423.872955386876
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,RU,288803.4619544702
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,TR,67105.5367617585
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,US,2179088.6311337133
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WA,155396.90549202662
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WE,20980.13655632834
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WF,105572.58980604593
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WL,170626.04922376134
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WM,196295.12802405644
+OWID,EMBER,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,ZA,80669.5112180033
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",AU,296538.37127706717
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",BR,546225.6997616175
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",CA,392421.9288871146
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",CH,132458.68739228614
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",CN,2200350.1946867453
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",EU27,3368127.742708712
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",GB,528631.4964869954
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",ID,355734.9913646041
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",IN,449462.44941746676
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",JP,1119576.953978927
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",KR,324653.52152543433
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",MX,307739.60237660963
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",NO,101602.40509111073
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",RU,360429.23790870456
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",TR,268265.26820632257
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",US,2725867.1715076505
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WA,649232.0446532054
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WE,80137.52467665442
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WF,416862.23983767687
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WL,609962.1553186051
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WM,849653.2988025025
+OWID,EMBER,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",ZA,92033.38720070382

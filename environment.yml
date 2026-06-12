@@ -1,0 +1,16 @@
+# Primary environment for the PV-HLCA reproducible pipeline (mario 1.0.0).
+# conda env create -f environment.yml  &&  conda activate pv_hlca
+name: pv_hlca
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - numpy=2.1
+  - pandas=3.0
+  - openpyxl
+  - pyyaml
+  - matplotlib
+  - jupyterlab
+  - pip:
+      - mario==1.0.0

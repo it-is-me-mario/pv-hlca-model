@@ -1,0 +1,353 @@
+capacity_factor,electricity_mix,module_efficiency,upstream_reshoring,degradation_rate,lci_variant,scenario,factor,region,value_added
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,AU,530410.9248498509
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,BR,844947.9088445369
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,CA,665919.5526356532
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,CH,272916.921203313
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,CN,2692143.3391719405
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,EU27,5949115.2220938485
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,GB,1096704.7031282848
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,ID,191480.31788087892
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,IN,644617.8280456134
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,JP,2229867.3815614954
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,KR,399807.2023707782
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,MX,237714.21015009255
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,NO,161069.5023621074
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,RU,610140.4927207488
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,TR,216374.4933057877
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,US,6147631.164141871
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,WA,1112499.8414292382
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,WE,155247.24929848532
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,WF,493329.9301641868
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,WL,815852.5006798492
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,WM,860299.0304923963
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Compensation of employees,ZA,116571.76344323155
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,AU,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,BR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,CA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,CH,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,CN,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,EU27,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,GB,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,ID,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,IN,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,JP,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,KR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,MX,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,NO,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,RU,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,TR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,US,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,WA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,WE,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,WF,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,WL,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,WM,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,None,ZA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,AU,234525.9384338631
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,BR,418039.70552585553
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,CA,235309.4872729293
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,CH,89702.73209160398
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,CN,780137.8391723358
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,EU27,1817075.4524654865
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,GB,235310.9175916035
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,ID,68669.78927383623
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,IN,256453.14503381238
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,JP,774440.2466374187
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,KR,119993.37577857365
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,MX,287077.80645304243
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,NO,46399.653964923404
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,RU,288726.09238660766
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,TR,67157.26499858923
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,US,2178314.654524883
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WA,155837.22277992713
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WE,20993.109915597244
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WF,105591.05205228475
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WL,170717.96227846135
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,WM,196344.0209670636
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,Operating surplus: Consumption of fixed capital,ZA,80628.72551958641
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",AU,296440.4019567174
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",BR,545657.6446887058
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",CA,392071.1156606768
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",CH,132208.60181827898
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",CN,2209341.824578008
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",EU27,3365834.4589165105
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",GB,528462.6011392188
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",ID,356660.2907546948
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",IN,449152.8663862121
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",JP,1118997.1775760849
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",KR,324968.777829751
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",MX,307606.2702520625
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",NO,101558.14718543457
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",RU,360302.41548057145
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",TR,268233.91505459434
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",US,2724431.388189351
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WA,650235.0839016784
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WE,80121.65851671704
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WF,416780.6646353646
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WL,609646.4737043888
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",WM,849644.0926136775
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline,"Taxes, subsidies and net surplus",ZA,91909.09703728263
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,AU,530479.1832026286
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,BR,844962.5493871071
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,CA,666292.2001154248
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,CH,273336.4935444823
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,CN,2686428.8590518055
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,EU27,5955867.808152049
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,GB,1096933.570785937
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,ID,191504.94808637415
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,IN,644642.587561892
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,JP,2229837.861106869
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,KR,399942.5038908229
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,MX,237730.35196210037
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,NO,160972.82062774454
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,RU,610051.3423620625
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,TR,216390.40185283107
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,US,6147943.389135242
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,WA,1112903.4958021217
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,WE,155260.90263199017
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,WF,493306.852510171
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,WL,815709.296223481
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,WM,860192.7323241918
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Compensation of employees,ZA,116639.96133171409
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,AU,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,BR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,CA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,CH,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,CN,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,EU27,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,GB,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,ID,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,IN,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,JP,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,KR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,MX,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,NO,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,RU,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,TR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,US,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,WA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,WE,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,WF,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,WL,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,WM,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,None,ZA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,AU,234668.1114960335
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,BR,418061.8595440904
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,CA,235854.32557750648
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,CH,89913.82728773417
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,CN,783975.0915600455
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,EU27,1828566.6336698753
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,GB,235628.61003035726
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,ID,68682.19413058137
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,IN,256461.03606244782
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,JP,774434.2834162315
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,KR,120076.6715055547
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,MX,287121.0814596988
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,NO,46252.39103555419
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,RU,288625.8378903997
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,TR,67161.45173291568
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,US,2178569.523757626
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WA,155896.17441610282
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WE,20994.54303322503
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WF,105540.65688429741
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WL,170705.81515962374
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,WM,196198.13639635887
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,Operating surplus: Consumption of fixed capital,ZA,80736.34418430687
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",AU,296543.81726874015
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",BR,545687.6645744353
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",CA,392471.10185165436
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",CH,132361.37429840068
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",CN,2212156.3721237537
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",EU27,3373283.557441136
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",GB,528456.1768196806
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",ID,356676.2528703866
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",IN,449165.2602850893
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",JP,1118974.4579175247
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",KR,325205.6566760199
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",MX,307603.8575417065
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",NO,100915.38338780591
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",RU,360079.43374546204
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",TR,268243.70048222854
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",US,2724603.0426378106
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WA,650359.2155450842
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WE,80092.90729534141
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WF,416346.71193825285
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WL,609544.264252038
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",WM,848570.5006690676
+RN,WEO_STEPS,0.195,,0.0,IEA,NZIA,"Taxes, subsidies and net surplus",ZA,92013.40072517439
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,AU,530483.3057535872
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,BR,844957.847493135
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,CA,666213.740846572
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,CH,273116.16942002473
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,CN,2687486.9718037206
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,EU27,5953767.552424753
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,GB,1096944.8646105563
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,ID,191504.33104274338
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,IN,644635.0739742833
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,JP,2229847.7043960616
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,KR,399906.043407578
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,MX,237729.77774935422
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,NO,160956.6980391588
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,RU,610020.0152147203
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,TR,216384.30976943497
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,US,6147840.3067885805
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WA,1112840.9423059782
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WE,155247.61969356632
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WF,493291.9438788561
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WL,815700.8044952268
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,WM,860157.6785201709
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Compensation of employees,ZA,116638.06784596023
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,AU,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,BR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,CA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,CH,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,CN,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,EU27,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,GB,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,ID,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,IN,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,JP,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,KR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,MX,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,NO,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,RU,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,TR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,US,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,WA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,WE,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,WF,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,WL,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,WM,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,None,ZA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,AU,234676.74142538896
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,BR,418057.7406118294
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,CA,235744.372952526
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,CH,89800.35078757098
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,CN,784396.7798462741
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,EU27,1827792.5474308473
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,GB,235664.05323390075
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,ID,68681.98087006412
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,IN,256458.00955030104
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,JP,774437.9853406197
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,KR,120054.61957022312
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,MX,287118.78636163444
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,NO,46243.03415878674
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,RU,288596.6640949476
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,TR,67159.8138222853
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,US,2178500.9515295424
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WA,155889.79838816688
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WE,20991.77226591731
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WF,105536.09741060437
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WL,170702.3035905047
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,WM,196190.07401293825
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,Operating surplus: Consumption of fixed capital,ZA,80733.58020417829
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",AU,296551.3316459789
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",BR,545681.319793193
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",CA,392382.6617951469
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",CH,132283.23078779262
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",CN,2214360.7118152045
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",EU27,3371931.5982034025
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",GB,528461.8145864627
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",ID,356674.87017441797
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",IN,449159.114935972
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",JP,1118978.9357631714
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",KR,325150.37464459444
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",MX,307601.3147776037
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",NO,100894.22799194716
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",RU,360055.05858665484
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",TR,268240.6155676708
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",US,2724552.272027355
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WA,650340.0120423276
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WE,80083.58352574223
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WF,416324.35500567267
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WL,609530.1245895193
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",WM,848527.1230860045
+RN,WEO_STEPS,0.195,,0.0,IEA,baseline_2030,"Taxes, subsidies and net surplus",ZA,92010.68381969178
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,AU,530551.7634463304
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,BR,845520.9951887273
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,CA,666412.8313720273
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,CH,273637.5226324193
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,CN,2687314.761253641
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,EU27,5953340.387284629
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,GB,1097122.3504954558
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,ID,191026.41631937237
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,IN,645202.409547581
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,JP,2230988.642465975
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,KR,399660.22886399075
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,MX,237808.4826792547
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,NO,161114.55353213602
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,RU,610221.87047219
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,TR,216487.21185475125
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,US,6151212.799984275
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,WA,1111627.9109740187
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,WE,155286.74248120136
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,WF,493397.43015630037
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,WL,816166.2841272511
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,WM,860403.8832754248
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Compensation of employees,ZA,116708.1746314901
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,AU,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,BR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,CA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,CH,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,CN,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,EU27,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,GB,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,ID,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,IN,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,JP,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,KR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,MX,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,NO,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,RU,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,TR,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,US,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,WA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,WE,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,WF,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,WL,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,WM,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,None,ZA,0.0
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,AU,234679.99617017264
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,BR,418575.34686323476
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,CA,235926.22507661924
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,CH,90089.14494327425
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,CN,778149.033259525
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,EU27,1819019.0492190544
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,GB,235575.53534567283
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,ID,68352.27949349998
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,IN,256687.5246695697
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,JP,775347.795287484
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,KR,119943.11612112306
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,MX,287425.36338659073
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,NO,46426.400527924925
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,RU,288896.08918297174
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,TR,67196.673775285
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,US,2181542.7131419224
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WA,155653.08116860184
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WE,21000.381151145717
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WF,105617.57823082193
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WL,170888.45143487526
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,WM,196364.73582503802
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,Operating surplus: Consumption of fixed capital,ZA,80829.51532370358
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",AU,296563.4947755633
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",BR,546502.6435553727
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",CA,392591.0193990451
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",CH,132476.2280672076
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",CN,2199143.4329789146
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",EU27,3368363.752916068
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",GB,528690.9624878742
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",ID,355746.0456106024
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",IN,449637.2911229683
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",JP,1119680.5152526216
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",KR,324736.40052150784
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",MX,307880.9858244973
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",NO,101609.85873409144
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",RU,360526.3662018071
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",TR,268299.4707559095
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",US,2726783.87550323
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WA,649325.4284868042
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WE,80147.7172339757
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WF,416909.61723710253
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WL,610203.9166098487
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",WM,849755.8503129331
+RN,WEO_STEPS,0.195,,0.0,IEA,domestic,"Taxes, subsidies and net surplus",ZA,92107.07556183367

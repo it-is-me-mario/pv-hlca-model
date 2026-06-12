@@ -1,0 +1,86 @@
+# Region code->OWID name and new-activity->parent-activity (VA/employment regionalization)
+region_code_to_full_name:
+  AT: Austria
+  AU: Australia
+  BE: Belgium
+  BG: Bulgaria
+  BR: Brazil
+  CA: Canada
+  CH: Switzerland
+  CN: China
+  CY: Cyprus
+  CZ: Czechia
+  DE: Germany
+  DK: Denmark
+  EE: Estonia
+  EU27: European Union (27)
+  ES: Spain
+  FI: Finland
+  FR: France
+  GB: United Kingdom
+  GR: Greece
+  HR: Croatia
+  HU: Hungary
+  ID: Indonesia
+  IE: Ireland
+  IN: India
+  IT: Italy
+  JP: Japan
+  KR: South Korea
+  LT: Lithuania
+  LU: Luxembourg
+  LV: Latvia
+  MT: Malta
+  MX: Mexico
+  NL: Netherlands
+  'NO': Norway
+  PL: Poland
+  PT: Portugal
+  RO: Romania
+  RU: Russia
+  SE: Sweden
+  SI: Slovenia
+  SK: Slovakia
+  TR: Turkey
+  US: United States
+  ZA: South Africa
+  WF: WF
+  WE: WE
+  WA: WA
+  WL: WL
+  WM: WM
+new_activity_parent:
+  Solar Power Plant: Solar
+  PV modules production: Manufacture of electrical machinery and apparatus n.e.c.
+    (31)
+  Cells production: Manufacture of electrical machinery and apparatus n.e.c. (31)
+  Wafer production: Manufacture of electrical machinery and apparatus n.e.c. (31)
+  Ingot production: Manufacture of electrical machinery and apparatus n.e.c. (31)
+  Solar Grade silicon production: Aluminium production
+  Metallurgical Grade silicon production: Aluminium production
+
+# Mapping of the 22 model regions to IRENA 2024 Power Generation Costs macro-regions
+# (reference/irena_lcoe_2024.csv), for the price-verification figure.
+region_to_irena_macro:
+  WF: Africa
+  ZA: Africa
+  WL: Other South America
+  BR: Brazil
+  WM: Eurasia
+  RU: Eurasia
+  TR: Eurasia
+  WE: Europe
+  EU27: Europe
+  GB: Europe
+  NO: Europe
+  CH: Europe
+  WA: Other Asia
+  JP: Other Asia
+  KR: Other Asia
+  ID: Other Asia
+  AU: Oceania
+  CN: China
+  IN: India
+  US: United States
+  CA: Other North America
+  MX: Central America and the Caribbean
