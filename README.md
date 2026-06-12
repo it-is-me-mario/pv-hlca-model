@@ -1,7 +1,7 @@
 # PV-HLCA — hybrid LCA of the solar-PV supply chain
 
-Reproducible pipeline for the paper *"Extending EXIOBASE through explicit solar PV
-supply-chain modelling: implications for the EU Net Zero Industry Act"* (Merletti et al.).
+Reproducible pipeline for the paper *"Environmental and socio-economic implications of solar PV
+reshoring under the EU Net Zero Industry Act: a hybrid input–output assessment"* (Rinaldi et al.).
 
 It embeds an explicit photovoltaic (PV) supply chain into a hybrid-units MRIO
 (EXIOBASE extended with hydrogen and green steel) and computes the carbon footprint,
@@ -28,7 +28,7 @@ jupyter lab notebooks/PV_HLCA_pipeline.ipynb   # full pipeline, A→Z (parse →
 python run_sensitivity.py            # paper sensitivity design -> outputs/sensitivity/
 python run_sensitivity.py --heavy    # + disaggregated footprint & decomposition data (all figures)
 python run_sensitivity.py --quick    # central case only (smoke test)
-python make_figures.py               # figures as paper-numbered TIFFs (Figure2 … Figure9)
+python make_figures.py               # figures as paper-numbered TIFFs (Figure2 … Figure8)
 ```
 
 The central (reference) case is OWID capacity factors, the WEO_STEPS 2030 grid applied to
@@ -88,7 +88,7 @@ every lever and the scenario:
 
 `figures.make_all` turns these into the publication figures (`outputs/figures/`), each saved
 as PNG (200 dpi) and TIFF (600 dpi). `make_figures.py` additionally saves them under the
-paper figure numbers (`Figure2.tiff … Figure9.tiff`).
+paper figure numbers (`Figure2.tiff … Figure8.tiff`).
 
 ## Layout
 

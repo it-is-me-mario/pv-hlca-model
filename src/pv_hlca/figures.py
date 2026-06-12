@@ -24,6 +24,17 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 
+# slightly larger base fonts across all figures (structural text: titles, axis labels,
+# ticks, legends); dense in-bar annotations keep their explicit smaller sizes
+plt.rcParams.update({
+    "font.size": 11.5,
+    "axes.titlesize": 13,
+    "axes.labelsize": 12,
+    "xtick.labelsize": 10.5,
+    "ytick.labelsize": 10.5,
+    "legend.fontsize": 10.5,
+})
+
 LEVERS = ["capacity_factor", "electricity_mix", "module_efficiency", "upstream_reshoring"]
 # Central case = published configuration: OWID cumulative capacity factor
 # (flow-realised fleet CF; RN single-grid-point sampling sits on the band's high
@@ -263,7 +274,7 @@ def fig_decomp(sens_dir, outdir, scenario="baseline", regions=("EU27", "CN"),
 _ONESTEP_ACTS = ["Metallurgical Grade silicon production", "Solar Grade silicon production",
                  "Ingot production", "Wafer production", "Cells production",
                  "PV modules production", "Solar Power Plant"]
-_ONESTEP_LABELS = ["MG-Si", "SG-Si", "Ingot", "Wafer", "Cells", "Modules", "Solar"]
+_ONESTEP_LABELS = ["MG-Si", "SG-Si", "Ingot", "Wafer", "Cells", "Modules", "Electricity"]
 #: (upstream PV commodity consumed, activity that produces it) -> linkage bands
 _ONESTEP_LINK = [("PV modules", "PV modules production", "Solar Power Plant"),
                  ("Cells", "Cells production", "PV modules production"),
@@ -355,7 +366,7 @@ def fig_onestep(sens_dir, outdir, scenario="baseline", regions=("EU27", "CN"), m
     :func:`fig_decomp` via ``CATEGORY_COLORS``."""
     df = pd.read_parquet(Path(sens_dir) / f"onestep_{scenario}.parquet")
     act_map, com_map = _onestep_maps(mapping_path)
-    fig, axes = plt.subplots(1, len(regions), figsize=(6.8 * len(regions), 5.4), sharey=True)
+    fig, axes = plt.subplots(1, len(regions), figsize=(6.5 * len(regions), 7.3), sharey=True)
     axes = np.atleast_1d(axes)
     for ax, reg in zip(axes, regions):
         _onestep_panel(ax, df, reg, act_map, com_map)
@@ -549,13 +560,15 @@ def _upstream_panel(ax, sens_dir, region="EU27", scenario="NZIA"):
     ax2 = ax.twinx(); ax2.grid(False)
     # the two curves are identified by the matching axis colours (no legend needed)
     C_FOOT, C_VA = MARIO["dark_blue"], MARIO["orange"]
-    ax2.plot(ups, va_rec, "s-", color=C_VA, lw=2, ms=5, zorder=2)
-    ax.plot(ups, foot, "o-", color=C_FOOT, lw=2, ms=6, zorder=3)
+    xs = [u * 100 for u in ups]                    # plot the domestic share as integer %
+    ax2.plot(xs, va_rec, "s-", color=C_VA, lw=2, ms=5, zorder=2)
+    ax.plot(xs, foot, "o-", color=C_FOOT, lw=2, ms=6, zorder=3)
     # NZIA as declared = black vertical line at the 40% upstream share
-    ax.axvline(PUB_X, color="black", ls="--", lw=1.3, zorder=4)
-    ax.annotate("NZIA", xy=(PUB_X, 1.0), xycoords=("data", "axes fraction"), xytext=(4, -4),
+    ax.axvline(PUB_X * 100, color="black", ls="--", lw=1.3, zorder=4)
+    ax.annotate("NZIA", xy=(PUB_X * 100, 1.0), xycoords=("data", "axes fraction"), xytext=(4, -4),
                 textcoords="offset points", fontsize=8.5, color="black", va="top", ha="left")
-    ax.set_xlabel("EU domestic production share of PV supply-chain stages")
+    ax.set_xlabel("EU domestic production share of PV supply-chain stages [%]")
+    ax.set_xticks(range(0, 101, 20))
     ax.set_ylabel(f"{region} footprint [gCO₂eq/kWh]", color=C_FOOT)
     ax2.set_ylabel("EU value added recovered [b€]", color=C_VA)
     ax.tick_params(axis="y", colors=C_FOOT)
@@ -584,7 +597,7 @@ def fig_sensitivity(sens_dir, outdir):
     """Sensitivity and robustness (combined): (a) tornado ranking of the physical
     uncertainty levers (EU27 vs China) and (b) the upstream-reshoring scan of the EU
     footprint and recovered value added. Merges :func:`fig2` and :func:`fig_upstream`."""
-    fig, axes = plt.subplots(1, 2, figsize=(13.5, 5.0))
+    fig, axes = plt.subplots(1, 2, figsize=(13, 7.3))
     _tornado_panel(axes[0], sens_dir)
     _upstream_panel(axes[1], sens_dir)
     axes[0].set_title("a) Footprint sensitivity to input-data uncertainty")
@@ -726,7 +739,7 @@ def fig_va_employment(sens_dir, outdir, ref="baseline_2030", scen="NZIA",
                             xytext=(0, 6 if v >= 0 else -12), textcoords="offset points",
                             ha="center", fontsize=8, fontweight="bold", color="0.25")
 
-    fig, axes = plt.subplots(1, 2, figsize=(12.5, 4.8))
+    fig, axes = plt.subplots(1, 2, figsize=(12.5, 7.0))
     # --- (a) VA ---
     ax = axes[0]
     bottom_pos = np.zeros(len(regions)); bottom_neg = np.zeros(len(regions))
@@ -819,7 +832,7 @@ def fig_stages(sens_dir, outdir, cfg=None):
         g = d.groupby("origin")["ghg"].sum() * TJ_TO_GKWH
         return g.reindex(list(ORI)).fillna(0.0)
 
-    fig, axes = plt.subplots(1, 2, figsize=(12, 4.4))
+    fig, axes = plt.subplots(1, 2, figsize=(12.5, 7.0))
 
     # --- panel a: EU world-production share ---
     ax = axes[0]
