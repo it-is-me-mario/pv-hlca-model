@@ -234,7 +234,11 @@ def _write_topdown(cfg, outdir: Path, *, resume: bool = True) -> None:
     if resume and out.exists():
         return
     t = time.time()
-    fp = indicators.topdown_footprint(cfg, g_per_kwh=True)
+    # Recompute the benchmark from the raw EXIOBASE 3.3.18 hybrid SUT (reproducible),
+    # rather than reading the legacy published values (whose provenance/GHG-account
+    # selection could not be reproduced). Same DB the prices match; fossil CO2 + CH4 +
+    # N2O via the satellite aggregation, AR6 GWP.
+    fp = indicators.topdown_footprint_exiobase_raw(cfg, g_per_kwh=True)
     if fp is None:
         _log("top-down skipped (exiobase_raw not configured/available)")
         return

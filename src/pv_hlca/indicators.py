@@ -279,3 +279,39 @@ def topdown_footprint_exiobase_raw(cfg, g_per_kwh: bool = True):
                  ignore_nan=True, zero_output_epsilon=None, drop=["unused"])
     act = db.search("Activity", "photovoltaic")[0]
     return solar_footprint(db, cfg, "baseline", g_per_kwh=g_per_kwh, activity=act)
+
+
+def topdown_f_dis_solar(cfg):
+    """Disaggregated top-down solar footprint from the raw EXIOBASE 3.3.18 hybrid SUT:
+    diag(e_CO2eq) . w for the 'Production of electricity by solar photovoltaic' activity
+    column, long form [Region_from, Activity, Region_to, CO2eq] in the same units as
+    :func:`f_dis_solar` (t/TJ; ×3.6 -> g/kWh at plot time). The raw-EXIOBASE counterpart
+    of f_dis_solar, used for the Top-Down vs Hybrid breakdown comparison. Returns ``None``
+    if the raw EXIOBASE path is unavailable."""
+    import mario
+    path = cfg["data"].get("exiobase_raw")
+    if not path or not Path(path).exists():
+        return None
+    db = mario.parse_exiobase(table="SUT", unit="Hybrid", path=str(path), extensions="all")
+    reg = pd.read_excel(cfg["data"]["aggregation"], sheet_name="Region", index_col=0)
+    reg.columns = ["Aggregation"]; reg = reg.reindex(db.get_index("Region"))
+    sat = pd.DataFrame(
+        {"Aggregation": [_TOPDOWN_GHG.get(s, "unused") for s in db.get_index("Satellite account")]},
+        index=db.get_index("Satellite account"))
+    db.aggregate(io={"Region": reg, "Satellite account": sat},
+                 levels=["Region", "Satellite account"],
+                 ignore_nan=True, zero_output_epsilon=None, drop=["unused"])
+    act = db.search("Activity", "photovoltaic")[0]
+    e = db.query(matrices="e", scenarios="baseline")
+    w = db.query(matrices="w", scenarios="baseline")
+    edir = co2eq_series(e, cfg).reindex(w.index).fillna(0)
+    cols = w.columns
+    solar = cols[(cols.get_level_values(1) == "Activity") & (cols.get_level_values(2) == act)]
+    sub = w[solar].multiply(edir.values, axis=0)
+    sub = sub[sub.index.get_level_values(1) == "Activity"]      # emissions originate in activities
+    sub.index = pd.MultiIndex.from_tuples([(r[0], r[2]) for r in sub.index],
+                                          names=["Region_from", "Activity"])
+    sub.columns = [c[0] for c in solar]                          # to-region
+    out = sub.stack().rename("CO2eq").reset_index()
+    out.columns = ["Region_from", "Activity", "Region_to", "CO2eq"]
+    return out[out["CO2eq"].abs() > 0]

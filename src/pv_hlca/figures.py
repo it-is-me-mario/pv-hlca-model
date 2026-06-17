@@ -331,6 +331,7 @@ def _onestep_panel(ax, df, region, act_map, com_map):
                 seen.add(cat); bottom += v
 
     pos = {a: x[j] for j, a in enumerate(_ONESTEP_ACTS)}
+    perc_by_act = {}
     for com, left_act, act in _ONESTEP_LINK:
         if left_act not in pos or act not in pos:
             continue
@@ -340,6 +341,7 @@ def _onestep_panel(ax, df, region, act_map, com_map):
         val = d[(d.to_activity == act) & (d.from_level == "Commodity")
                 & (d.from_item == com)]["ghg"].sum()
         perc = val / tot * 100
+        perc_by_act[act] = perc
         xl, xr = pos[left_act] + bw/2, pos[act] - bw/2
         # flat, very pale fill of the linking band (no gradient)
         ax.fill([xl, xr, xr, xl], [100, perc, 0, 0], color=CATEGORY_COLORS["PV supply chain"],
@@ -348,6 +350,18 @@ def _onestep_panel(ax, df, region, act_map, com_map):
         ax.plot([xr, pos[act] + bw/2], [perc, perc], color="0.35", alpha=0.6, lw=1.1, zorder=1)
         ax.text(xr - 0.1, perc, f"{perc:.0f}%", ha="right", va="center", fontsize=9,
                 color="0.2", fontweight="bold")
+
+    # PV-supply-chain footprint embodied in 1 kWh, cascaded down the chain (gCO₂eq/kWh):
+    # the inherited share at each stage multiplied through, anchored to the final total
+    cum = absol.get("Solar Power Plant", np.nan)
+    for act in _ONESTEP_ACTS[::-1]:                          # final (Solar) -> raw (MG-Si)
+        p = perc_by_act.get(act)
+        if p is None or not np.isfinite(cum):
+            continue
+        cum = cum * p / 100.0
+        txt = f"{cum:.0f} gCO₂eq/kWh" if act == "Solar Power Plant" else f"{cum:.0f}"
+        ax.text(pos[act], 20, txt, ha="center", va="bottom",
+                rotation=90, fontsize=7.5, fontweight="bold", color="0.12")
 
     ax.set_xticks(x); ax.set_xticklabels(_ONESTEP_LABELS, rotation=40, ha="right")
     ax.set_ylim(0, 100); ax.margins(x=0.02)
@@ -618,56 +632,111 @@ def fig_breakdown(sens_dir, outdir, scenario="baseline", countries=None, mapping
     if not fpath.exists():
         raise FileNotFoundError(f"{fpath} missing — run the heavy export (f_dis_solar).")
     countries = countries or SELECTION
-    fd = pd.read_parquet(fpath)
-    fd = fd[(fd["scenario"] == scenario) & _is_central(fd)].copy()
-    fd["CO2eq"] *= 3.6                                        # -> gCO2eq/kWh
     if mapping_path is None:
         mapping_path = Path(__file__).resolve().parents[2] / "data" / "Mapping_activities.xlsx"
     mp = pd.read_excel(mapping_path).set_index("Activity_from")["Map4"]
-    fd["group"] = fd["Activity"].map(mp).fillna("Other")
-    # the PV activities are the direct emitters of each stage — label them as in
-    # fig_onestep ("Direct emissions"), so the two figures share one category meaning
-    fd["group"] = fd["group"].replace({"PV supply chain": "Direct emissions",
-                                       "Solar PP, direct": "Direct emissions"})
-    fd["origin"] = np.where(fd["Region_from"] == "CN", "China",
-                    np.where(fd["Region_from"] == "EU27", "European Union", "Rest of World"))
+
+    def _group(act, fix_electricity=False):
+        g = act.map(mp)
+        if fix_electricity:        # raw-EXIOBASE per-fuel electricity sectors -> "Electricity"
+            g = g.where(~act.str.contains("electricity", case=False, na=False), "Electricity")
+        # PV activities are the direct emitters of each stage -> "Direct emissions" (as in fig_onestep)
+        return g.fillna("Other").replace({"PV supply chain": "Direct emissions",
+                                          "Solar PP, direct": "Direct emissions"})
+
+    def _origin(rf):
+        return np.where(rf == "CN", "China",
+                np.where(rf == "EU27", "European Union", "Rest of World"))
+
+    ORI = {"China": MARIO["blue"], "European Union": MARIO["dark_blue"], "Rest of World": MARIO["orange"]}
+
+    # --- hybrid disaggregation, all producing regions (top row, unchanged) ---
+    fd = pd.read_parquet(fpath)
+    fd = fd[(fd["scenario"] == scenario) & _is_central(fd)].copy()
+    fd["CO2eq"] *= 3.6                                        # -> gCO2eq/kWh
+    fd["group"] = _group(fd["Activity"])
+    fd["origin"] = _origin(fd["Region_from"])
+
+    # --- top-down disaggregation, raw EXIOBASE benchmark (bottom-row comparison) ---
+    tdpath = Path(sens_dir) / "topdown_dis_solar.parquet"
+    td = None
+    if tdpath.exists():
+        td = pd.read_parquet(tdpath).copy()
+        td["CO2eq"] *= 3.6
+        td["group"] = _group(td["Activity"], fix_electricity=True)
+        td["origin"] = _origin(td["Region_from"])
 
     order = (fd.groupby("Region_to")["CO2eq"].sum().reindex(countries)
              .sort_values(ascending=True).index)
 
-    fig, axes = plt.subplots(1, 2, figsize=(13, 0.5 * len(order) + 1.6), sharey=True)
+    fig, axes = plt.subplots(2, 2, figsize=(13, 11),
+                             gridspec_kw={"height_ratios": [len(order), 5]})
 
-    # (a) by activity of origin
-    ga = fd.groupby(["Region_to", "group"])["CO2eq"].sum().unstack("group").reindex(order).fillna(0)
-    ga = ga[[c for c in CATEGORY_COLORS if c in ga.columns] +
-            [c for c in ga.columns if c not in CATEGORY_COLORS]]
-    left = np.zeros(len(ga))
-    for col in ga.columns:
-        axes[0].barh(ga.index, ga[col].values, left=left,
-                     color=CATEGORY_COLORS.get(col, "#bbb"), label=col, height=0.7)
-        left += ga[col].values
-    for yi, tot in enumerate(left):                          # total at the end of each bar
-        axes[0].text(tot + 0.6, yi, f"{tot:.0f}", va="center", ha="left", fontsize=7.5, color="0.25")
-    axes[0].set_title("a) By activity of origin")
-    axes[0].set_xlabel("gCO₂eq/kWh")
-    axes[0].legend(fontsize=7.5, ncol=1, loc="lower right")
+    # ===== row 1: Hybrid, all regions, absolute g/kWh =====
+    def _stack_abs(ax, dim, cmap, title):
+        g = fd.groupby(["Region_to", dim])["CO2eq"].sum().unstack(dim).reindex(order).fillna(0)
+        g = g[[c for c in cmap if c in g.columns] + [c for c in g.columns if c not in cmap]]
+        left = np.zeros(len(g))
+        for col in g.columns:
+            ax.barh(g.index, g[col].values, left=left, color=cmap.get(col, "#bbb"), label=col, height=0.7)
+            left += g[col].values
+        for yi, tot in enumerate(left):
+            ax.text(tot + 0.6, yi, f"{tot:.0f}", va="center", ha="left", fontsize=7.5, color="0.25")
+        ax.set_title(title); ax.set_xlabel("gCO₂eq/kWh")
+        for lbl in ax.get_yticklabels():
+            if lbl.get_text() in ("EU27", "CN"):
+                lbl.set_fontweight("bold")
 
-    # (b) by region of origin
-    ORI = {"China": MARIO["blue"], "European Union": MARIO["dark_blue"], "Rest of World": MARIO["orange"]}
-    gb = fd.groupby(["Region_to", "origin"])["CO2eq"].sum().unstack("origin").reindex(order).fillna(0)
-    gb = gb[[c for c in ORI if c in gb.columns]]
-    left = np.zeros(len(gb))
-    for col in gb.columns:
-        axes[1].barh(gb.index, gb[col].values, left=left, color=ORI[col], label=col, height=0.7)
-        left += gb[col].values
-    for yi, tot in enumerate(left):
-        axes[1].text(tot + 0.6, yi, f"{tot:.0f}", va="center", ha="left", fontsize=7.5, color="0.25")
-    axes[1].set_title("b) By region of origin")
-    axes[1].set_xlabel("gCO₂eq/kWh")
-    axes[1].legend(fontsize=8, loc="lower right")
-    for lbl in axes[0].get_yticklabels():
-        if lbl.get_text() in ("EU27", "CN"):
-            lbl.set_fontweight("bold")
+    _stack_abs(axes[0, 0], "group", CATEGORY_COLORS, "a) Hybrid — by activity of origin")
+    _stack_abs(axes[0, 1], "origin", ORI, "b) Hybrid — by region of origin")
+
+    # ===== row 2: EU27 & CN, 100%-share composition, Top-Down vs Hybrid =====
+    R2 = ["EU27", "CN"]
+    def _stack_share(ax, dim, cmap, title, ylabels=True):
+        if td is None:
+            ax.set_visible(False); return
+        models = [("Top-down", td), ("Hybrid", fd)]
+        # clustered y layout: the two model bars are grouped under each region, regions
+        # separated by a gap (two-level y axis: outer = region, inner = model)
+        entries, centers, y = [], {}, 0.0
+        for reg in R2[::-1]:                                  # R2[0] (EU27) ends on top
+            ys = []
+            for model, src in models[::-1]:                  # Top-down ends on top of the pair
+                s = src[src["Region_to"] == reg].groupby(dim)["CO2eq"].sum()
+                entries.append((reg, model, s, float(s.sum()), y)); ys.append(y); y += 0.85
+            centers[reg] = (ys, sum(ys) / len(ys)); y += 1.0
+        yv = [e[4] for e in entries]
+        cats = [c for c in cmap if any(c in e[2].index for e in entries)]
+        left = np.zeros(len(entries))
+        for c in cats:
+            vals = np.array([(e[2].get(c, 0) / e[3] * 100 if e[3] else 0) for e in entries])
+            ax.barh(yv, vals, left=left, color=cmap.get(c, "#bbb"), height=0.7, label=c)
+            left += vals
+        ax.set_yticks(yv)
+        if ylabels:
+            ax.set_yticklabels([e[1] for e in entries], fontsize=8)
+            tr = ax.get_yaxis_transform()                    # x in axes fraction, y in data
+            for reg, (ys, cy) in centers.items():            # outer level: region
+                ax.text(-0.20, cy, reg, transform=tr, rotation=90, va="center", ha="center",
+                        fontweight="bold", fontsize=10)
+        else:
+            ax.set_yticklabels([])
+        ax.set_xlim(0, 100); ax.set_ylim(-0.6, max(yv) + 0.6)
+        ax.set_xlabel("Share of footprint [%]")
+        ax.set_title(title)
+
+    _stack_share(axes[1, 0], "group", CATEGORY_COLORS, "c) Top-Down vs Hybrid — by activity")
+    _stack_share(axes[1, 1], "origin", ORI, "d) Top-Down vs Hybrid — by region of origin",
+                 ylabels=False)
+
+    # horizontal legends at the bottom of each column
+    h_a, l_a = axes[0, 0].get_legend_handles_labels()
+    axes[1, 0].legend(h_a, l_a, loc="upper center", bbox_to_anchor=(0.5, -0.18),
+                      ncol=4, fontsize=8, frameon=False)
+    h_b, l_b = axes[0, 1].get_legend_handles_labels()
+    axes[1, 1].legend(h_b, l_b, loc="upper center", bbox_to_anchor=(0.5, -0.18),
+                      ncol=3, fontsize=8.5, frameon=False)
+
     fig.tight_layout()
     return fig, _save(fig, outdir, "fig_breakdown")
 
