@@ -1,6 +1,6 @@
 # PV-HLCA — hybrid LCA of the solar-PV supply chain
 
-Reproducible pipeline for the paper *"Environmental and socio-economic implications of solar PV
+Reproducible pipeline for the paper *"Environmental and socio-economic implications of solar photovoltaic
 reshoring under the EU Net Zero Industry Act: a hybrid input–output assessment"* (Rinaldi et al.).
 
 It embeds an explicit photovoltaic (PV) supply chain into a hybrid-units MRIO
