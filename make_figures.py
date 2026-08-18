@@ -1,6 +1,6 @@
-"""Regenerate every manuscript figure from the data on disk and save it ONLY under the
-paper's figure number (Figure2 ... Figure9), as high-res TIFF, so the files can be
-dropped straight into the manuscript.
+"""Regenerate every manuscript figure panel from the data on disk and save it ONLY
+under the current paper's figure/panel number, as high-res TIFF, so the files can be
+dropped straight into the manuscript or combined into the final multi-panel figures.
 
 Each figure function also writes a content-named copy via figures._save; to avoid
 littering the figures dir with those, we redirect the internal save to a throwaway
@@ -19,13 +19,13 @@ from pv_hlca import io, figures                                  # noqa: E402
 
 # paper figure number -> (callable returning (fig, path), short description)
 SPECS = [
-    ("Figure2", lambda s, f: figures.fig1(s, f, scenario="baseline"),            "footprint validation"),
+    ("Figure2a", lambda s, f: figures.fig1(s, f, scenario="baseline"),           "footprint validation"),
+    ("Figure2b", lambda s, f: figures.fig_prices(s, f, scenario="baseline"),     "producer prices (+ top-down)"),
     ("Figure3", lambda s, f: figures.fig_breakdown(s, f, scenario="baseline"),   "footprint breakdown"),
     ("Figure4", lambda s, f: figures.fig_onestep(s, f, scenario="baseline"),     "supply-chain impact linkages"),
-    ("Figure5", lambda s, f: figures.fig_prices(s, f, scenario="baseline"),      "producer prices (+ top-down)"),
-    ("Figure6", lambda s, f: figures.fig_stages(s, f),                           "supply-chain reconfiguration"),
-    ("Figure7", lambda s, f: figures.fig_va_employment(s, f),                    "value added + employment"),
-    ("Figure8", lambda s, f: figures.fig_sensitivity(s, f),                      "sensitivity + upstream scan"),
+    ("Figure5a-b", lambda s, f: figures.fig_stages(s, f),                        "supply-chain reconfiguration"),
+    ("Figure5c-d", lambda s, f: figures.fig_va_employment(s, f),                 "value added + employment"),
+    ("Figure6", lambda s, f: figures.fig_sensitivity(s, f),                      "sensitivity + upstream scan"),
 ]
 
 if __name__ == "__main__":

@@ -11,6 +11,7 @@ dependencies:
   - openpyxl
   - pyyaml
   - matplotlib
+  - pyarrow
   - jupyterlab
   - pip:
-      - mario==1.0.0
+      - mariopy==1.0.0
