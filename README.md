@@ -1,138 +1,93 @@
-# PV-HLCA — hybrid LCA of the solar-PV supply chain
+# PV-HLCA
 
-Reproducible pipeline for the paper *"Environmental and socio-economic implications of solar photovoltaic
-reshoring under the EU Net Zero Industry Act: a hybrid input–output assessment"* (Rinaldi et al.).
+**A hybrid input-output model of the photovoltaic supply chain, built with MARIO.**
 
-It embeds an explicit photovoltaic (PV) supply chain into a hybrid-units MRIO
-(EXIOBASE extended with hydrogen and green steel) and computes the carbon footprint,
-price, production, value added and employment of solar electricity across world regions
-and policy scenarios, on `mario==1.0.0`. The whole study is **parametric**: each modelling
-choice is a named lever and the analysis is a global sensitivity sweep over their values.
+Explore how PV technology, manufacturing locations and electricity systems affect
+the carbon footprint and producer price of solar electricity, production, value
+added and employment across 22 world regions.
 
-## Quick start
+| Use the model | Reproduce the paper |
+|---|---|
+| Change technology parameters, define scenarios and compare results. | Access the archived study, its assumptions, sensitivity analysis and figures. |
+| [Get started](docs/use-the-model.md) · [Example notebook](notebooks/Use_the_model.ipynb) | [Reproduction guide](paper/README.md) · [Published archive](https://doi.org/10.5281/zenodo.20734983) |
+
+## Run your first experiment
+
+From a checkout of this repository, create a dedicated Python 3.12 environment:
 
 ```bash
 conda env create -f environment.yml
 conda activate pv_hlca
+python tools/install.py
 ```
 
-Download the base hybrid-units database from **Zenodo record 18744457**
-(<https://zenodo.org/records/18744457>) and place its SUT parquet files in
-`inputs/db_from_zenodo/` (the folder is git-ignored; the path is set in `config/paths.yaml`).
-Then either open the notebook, which runs everything from the raw database to the figures, or
-use the headless drivers:
+Obtain the base SUT coefficient files from [Zenodo 18744457](https://doi.org/10.5281/zenodo.18744457)
+and place them in `inputs/db_from_zenodo/`, or pass `--base-db /path/to/the/files`.
+If using Git LFS, `git lfs pull` retrieves the large tracked files.
+[Installation and data instructions](docs/installation.md).
 
 ```bash
-jupyter lab notebooks/PV_HLCA_pipeline.ipynb   # full pipeline, A→Z (parse → figures)
-
-python run_sensitivity.py            # paper sensitivity design -> outputs/sensitivity/
-python run_sensitivity.py --heavy    # + disaggregated footprint & decomposition data (all figures)
-python run_sensitivity.py --quick    # central case only (smoke test)
-python make_figures.py               # paper panels as TIFFs (Figure2a … Figure6; Figure1 is manual)
+pv-hlca check examples/eu_reshoring.yaml
+pv-hlca run examples/eu_reshoring.yaml
 ```
 
-The central (reference) case is OWID capacity factors, the WEO_STEPS 2030 grid applied to
-both the EU27 and China, 19.5 % module efficiency, no degradation, and the IEA PVPS upstream
-inventory; every other point of the analysis is a one-lever variation around it.
+The first run prepares `models/prepared/`. Later experiments reuse that verified
+bundle, so you can focus on parameters and scenarios. A prepared bundle can also
+be shared with collaborators who use the same code version; they can run it
+without the original large database. [How preparation works](docs/database-preparation.md).
 
-## Pipeline
+Results go to `outputs/eu_reshoring/`: six CSV tables plus the experiment definition
+and a run manifest. The commercial baseline is included in each comparison.
+Use a new `--output` directory for each experiment.
 
-```
-base hybrid-units SUT (Zenodo 18744457, parquet)
-  └─ aggregate ............ 48→22 regions + value-added (8→4) + satellite (363→25)
-  └─ add_sectors .......... insert the PV activities / commodities (Add_sectors.xlsx)
-  └─ solar shock .......... capacity-factor scaling, IRENA value added, module efficiency
-  └─ remove legacy Solar .. Solar Power Plant becomes the sole producer of 'Solar'
-  └─ scenarios ............ domestic · baseline (real trade) · NZIA · baseline_2030
-  └─ indicators ........... footprint, price, X / V / E, disaggregated f_dis / p_dis
-```
+## What can I change?
 
-Headline output: per-region solar-electricity footprint in gCO₂eq/kWh, plus the
-production / value-added / employment effects of the reshoring and 2030-grid scenarios.
+| Technology assumptions | Scenario choices |
+|---|---|
+| Regional capacity-factor source: OWID or Renewables Ninja | PV sourcing by importing region, supply-chain stage and supplier |
+| Module efficiency | Domestic sourcing shares, preserving the remaining foreign shares |
+| Annual degradation | Custom regional electricity mixes and separate household-demand additions |
+| Upstream electricity inventory: IEA PVPS or NREL | Reference presets: baseline, domestic, NZIA and baseline 2030 |
 
-## Sensitivity levers
+Copy an [example YAML](examples/eu_reshoring.yaml), edit the values and run it.
+The [parameter guide](docs/parameters.md) explains what each change means; the
+[scenario guide](docs/scenarios.md) explains what is held constant and how presets
+can be extended. These controls operate within the model's existing crystalline-silicon
+PV supply-chain representation and regional aggregation.
 
-Each modelling choice is a named lever (a field of `Params`, see `src/pv_hlca/params.py`):
+![PV electricity footprints under two EU sourcing scenarios](docs/assets/scenario-comparison.png)
 
-| lever | values | meaning |
-|---|---|---|
-| `capacity_factor` | `OWID`, `RN` | source of the regional solar-yield scaling |
-| `module_efficiency` | `0.195`, `0.22`, `0.24` | PV module efficiency (scales area-proportional inputs) |
-| `degradation_rate` | `0.0`, `0.005` | annual PV power degradation (0 = constant output) |
-| `lci_variant` | `IEA`, `NREL` | upstream-stage electricity inventory |
-| `upstream_reshoring` | `None`, `0.0 … 1.0` | forced EU domestic share of the upstream PV stages (NZIA) |
-| `electricity_mix` | `WEO_STEPS`, `EMBER` | source of the projected 2030 grid (central: WEO_STEPS, EU27 + China) |
+Example generated by the worked notebook: 22% module efficiency, 0.5% annual
+degradation, and two changes to EU sourcing under the same technology assumptions.
 
-`export.sensitivity_grid()` is the design used in the paper: a one-at-a-time sweep around the
-central case plus a 0→100 % upstream-reshoring scan. `export.default_grid()` is the full
-Cartesian product, and `grid(Params(), <axis>=[...])` builds any custom design. The hybrid
-base depends only on (`capacity_factor`, `degradation_rate`); the export rebuilds it once per
-such group and reuses it across the cheaper scenario levers.
+## Work in Python
 
-## Outputs
+```python
+from pv_hlca import PVModel, ModelParameters, Scenario
 
-`export.run_and_export` writes tidy tables to `outputs/sensitivity/`, each row tagged with
-every lever and the scenario:
+model = PVModel.load("models/prepared", ModelParameters(module_efficiency=0.22))
+model.add_scenario(Scenario(
+    "eu_modules_60",
+    domestic_shares={"EU27": {"PV modules": 0.60}},
+))
+footprints = model.results()["footprints"]
+comparison = footprints.pivot(index="region", columns="scenario", values="footprint_gkwh")
 
-| file | matrix | content |
-|---|---|---|
-| `footprints.csv` | f | region solar-electricity footprint (gCO₂eq/kWh) |
-| `prices.csv` | p | region solar-electricity price (EUR/kWh) |
-| `production.csv` | X | output of the PV commodities, per region |
-| `value_added.csv` | V | value added by production factor and region |
-| `employment.csv` | E | employment by region and activity |
-| `headline.csv` | — | EU total value added and global CO₂eq, per run |
-| `f_dis_solar.parquet` | — | disaggregated solar footprint (heavy export only) |
-| `fc_ex_<scenario>.parquet` | — | per-stage exploded footprint (`write_decomposition_data`) |
-| `onestep_<scenario>.parquet` | — | one-step impact-linkage decomposition (`write_onestep_data`) |
-
-`figures.make_all` turns these into the publication figures (`outputs/figures/`), each saved
-as PNG (200 dpi) and TIFF (600 dpi). `make_figures.py` additionally saves the generated
-panels under the current paper numbering: `Figure2a.tiff`, `Figure2b.tiff`, `Figure3.tiff`,
-`Figure4.tiff`, `Figure5a-b.tiff`, `Figure5c-d.tiff`, and `Figure6.tiff`. Figure 1 is a
-manually created schematic and is not generated by the codebase.
-
-## Layout
-
-```
-config/      paths.yaml, parameters.yaml (IRENA, GWP, 195 W/m², …), mappings.yaml,
-             import_structure.csv (baseline + NZIA), scenario_2030.yaml, capacity_factor_row.yaml
-data/        Add_sectors.xlsx, Aggregate_VA_SA_and_regions.xlsx, Mapping_activities.xlsx,
-             capacity-factor inputs (Renewables Ninja + frozen OWID multipliers)
-inputs/      db_from_zenodo/ — base hybrid-units SUT (download from Zenodo; git-ignored)
-src/pv_hlca/ io · hybridize · scenarios · indicators · export · figures · params · pipeline
-notebooks/   PV_HLCA_pipeline.ipynb — the full pipeline (also a template for new analyses)
-run_sensitivity.py   headless driver for the sensitivity grid
-validate.py          build + compare the baseline footprint to the reference results
-reference/   per-region reference footprints / prices (for validation)
-outputs/     generated results and figures (git-ignored)
+db = model.db  # the underlying MARIO Database, available for further analysis
 ```
 
-Hard-coded parameters of the reference implementation are externalised to `config/`
-(`extract_support_data.py` regenerates them).
+Start with the [worked notebook](notebooks/Use_the_model.ipynb) or consult the
+[Python API](docs/api.md). Preparation is documented separately, including the
+aggregation, sector insertion, source data and MARIO compatibility assumptions.
 
-## Implementation notes (mario 1.0.0)
+## Research reference
 
-- **SUT scenarios are stored as coefficient blocks** `u, s, va, vc, ea, ec, Ya, Yc`;
-  `z` is derived. Every trade/technology shock therefore edits the **use block `u`**
-  (Commodity→Activity), then `update_scenarios(scenario, u=…)` + `reset_to_coefficients`.
-- **`aggregate(..., zero_output_epsilon=None)`** — *required*. With the mario 1.0.0
-  default (`1e-30`) the SUT zero-output flow override divides non-zero hybrid-unit supply
-  by epsilon during the coefficient↔flow round-trip, yielding market shares `s` ~1e38, a
-  singular Leontief inverse and globally degenerate footprints. `None` is the fix.
-- **Legacy `Solar` activity** is neutralised in place (zero `u`/`s`/`va`/`ea`) rather than
-  dropped from the index — a second `aggregate` drop corrupts the supply market share in
-  1.0.0, so `Solar Power Plant` is left as the sole producer of the `Solar` commodity.
+The model was used in Rinaldi et al. (2026),
+[*Environmental and socio-economic implications of solar photovoltaic reshoring under
+the EU Net Zero Industry Act: a hybrid input–output assessment*](https://doi.org/10.1007/s44498-026-00175-0).
 
-## Validation
-
-`validate.py` rebuilds from Zenodo 18744457 and compares the baseline solar footprint to
-the reference results. The downstream pipeline (scenarios + indicators) was additionally
-cross-checked on `mario==0.3.5` against the reference, matching to 0.00% (RN capacity
-factor). The full rebuild on 18744457 agrees within a declared tolerance (it is not
-bit-exact, because the base-DB version differs from the one used for the original results).
-
-## Environments
-
-- `environment.yml` — `mario==1.0.0` (primary).
-- `environment-cross-check.yml` — `mario==0.3.5` (verification only).
+The study's archived code and results remain at
+[Zenodo 20734983, version 1.0.1](https://doi.org/10.5281/zenodo.20734983).
+The [reproduction guide](paper/README.md) distinguishes that published snapshot,
+the current reusable model and comparison with the older thesis reference data.
+See [executed checks and numerical agreement](docs/verification.md).

@@ -1,0 +1,39 @@
+title: A custom EU electricity mix and explicit PV module sourcing
+parameters:
+  module_efficiency: 0.195
+
+scenarios:
+  - name: eu_custom_grid
+    electricity_mix:
+      EU27:
+        Coal: 0.00
+        Gas: 0.10
+        Other Fossil: 0.00
+        Nuclear: 0.20
+        Solar: 0.25
+        Wind: 0.30
+        Hydro: 0.10
+        Bioenergy: 0.03
+        Other Renewables: 0.02
+
+  - name: eu_custom_grid_and_sourcing
+    sourcing:
+      EU27:
+        PV modules:
+          EU27: 0.60
+          CN: 0.30
+          WA: 0.10
+    electricity_mix:
+      EU27:
+        Coal: 0.00
+        Gas: 0.10
+        Other Fossil: 0.00
+        Nuclear: 0.20
+        Solar: 0.25
+        Wind: 0.30
+        Hydro: 0.10
+        Bioenergy: 0.03
+        Other Renewables: 0.02
+    # Optional *additional* household electricity demand, TJ; omitted means zero.
+    electricity_demand_tj:
+      EU27: 3600

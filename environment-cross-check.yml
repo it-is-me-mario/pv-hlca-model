@@ -13,4 +13,4 @@ dependencies:
   - pyyaml
   - matplotlib
   - pip:
-      - mario==0.3.5
+      - mariopy==0.3.5

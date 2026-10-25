@@ -72,13 +72,8 @@ def _is_done(run_dir: Path) -> bool:
 # --------------------------------------------------------------------------- #
 def _build_base(cfg):
     """parse -> aggregate -> add PV sectors -> calc_ghg. Invariant across all levers."""
-    db = io.parse_base_db(cfg)
-    io.aggregate_db(db, cfg)
-    hybridize.add_pv_sectors(db, cfg)
-    # single 'GHG' satellite (AR6 GWP-100) from the aggregated CO2/CH4/N2O buckets,
-    # used by the footprint and the exploded fc_ex decomposition
-    db.calc_ghg(gwp=dict(cfg["parameters"]["gwp_factors"]), label="GHG")
-    return db
+    from .pipeline import prepare_database
+    return prepare_database(cfg)
 
 
 # --------------------------------------------------------------------------- #

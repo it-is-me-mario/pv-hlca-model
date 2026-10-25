@@ -1,17 +1,10 @@
-# Primary environment for the PV-HLCA reproducible pipeline (mario 1.0.0).
-# conda env create -f environment.yml  &&  conda activate pv_hlca
+# Create the isolated environment, then run python tools/install.py.
+# The installer resolves PV runtime dependencies and handles MARIO 1.0.0's
+# conflicting optional cvxlab metadata (see docs/installation.md).
 name: pv_hlca
 channels:
   - conda-forge
 dependencies:
   - python=3.12
   - pip
-  - numpy=2.1
-  - pandas=3.0
-  - openpyxl
-  - pyyaml
-  - matplotlib
-  - pyarrow
   - jupyterlab
-  - pip:
-      - mariopy==1.0.0

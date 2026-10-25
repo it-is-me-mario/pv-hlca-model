@@ -12,6 +12,14 @@
 
 household_demand_constant: 1656000   # 460 * 3600, EU-calibrated final-demand bump (thesis)
 
+# Original NZIA assumptions, externalised without changing their values.
+nzia:
+  sea_transport_multiplier: 0.6
+  construction_coefficients:  # M€/unit of activity output (m² for these stages)
+    PV modules production: 0.00001
+    Cells production: 0.00002
+    Wafer production: 0.000025
+
 electricity_mix_2030:
 
   EMBER:
