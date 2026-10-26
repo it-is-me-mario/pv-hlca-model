@@ -21,20 +21,21 @@ conda activate pv_hlca
 python tools/install.py
 ```
 
-Obtain the base SUT coefficient files from [Zenodo 18744457](https://doi.org/10.5281/zenodo.18744457)
-and place them in `inputs/db_from_zenodo/`, or pass `--base-db /path/to/the/files`.
-If using Git LFS, `git lfs pull` retrieves the large tracked files.
-[Installation and data instructions](docs/installation.md).
-
 ```bash
 pv-hlca check examples/eu_reshoring.yaml
 pv-hlca run examples/eu_reshoring.yaml
 ```
 
-The first run prepares `models/prepared/`. Later experiments reuse that verified
+The first run automatically obtains any missing source database from the fixed
+[Zenodo record 18744457](https://doi.org/10.5281/zenodo.18744457): **1.78 GB**,
+with resumable downloads, published-checksum verification and automatic TXT-to-Parquet
+conversion. It then prepares `models/prepared/`. Later experiments reuse that verified
 bundle, so you can focus on parameters and scenarios. A prepared bundle can also
 be shared with collaborators who use the same code version; they can run it
-without the original large database. [How preparation works](docs/database-preparation.md).
+without the original large database. Existing complete local source files are
+reused. Use `pv-hlca download` to fetch the source separately, or `--offline` to
+prevent downloads. [Installation and data instructions](docs/installation.md) ·
+[How preparation works](docs/database-preparation.md).
 
 Results go to `outputs/eu_reshoring/`: six CSV tables plus the experiment definition
 and a run manifest. The commercial baseline is included in each comparison.

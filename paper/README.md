@@ -46,13 +46,20 @@ by this code. See the archived version for its original filenames and outputs.
 
 ## Rebuild the study
 
-After [installation](../docs/installation.md) and obtaining the fixed base files:
+After [installation](../docs/installation.md), the current sensitivity driver
+also obtains missing source files through the pinned Zenodo downloader. Download
+ahead of time if desired:
 
 ```bash
+pv-hlca download
 python run_sensitivity.py --quick --fresh  # central case only
 python run_sensitivity.py --heavy --fresh # study design + decomposition data
 python make_figures.py
 ```
+
+Use `--offline` with `run_sensitivity.py` to require local files or a verified
+download cache. This convenience belongs to the current development version;
+the archived 1.0.1 scripts retain their original manual data setup.
 
 These legacy commands keep their original output location, `outputs/sensitivity/`.
 Run them in a separate checkout or copy of the study if you want to preserve the

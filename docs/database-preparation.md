@@ -5,6 +5,7 @@ workflow operates on the prepared model, technology parameters and scenarios.
 
 ```text
 Zenodo 18744457: EXIOBASE-based hybrid-units SUT, extended with H2 and steel
+  → download six TXT files, verify published size/MD5 and convert to Parquet
   → aggregate to 22 regions, value-added categories and satellite accounts
   → insert explicit PV activities and commodities from Add_sectors.xlsx
   → add the GHG satellite with the configured GWP factors
@@ -23,6 +24,7 @@ Prepared model
 | File | Role |
 |---|---|
 | `config/paths.yaml` | Source database, input workbooks, reference and output paths |
+| `config/zenodo-source.json` | Fixed source record, six file URLs, sizes and published checksums |
 | `data/Aggregate_VA_SA_and_regions.xlsx` | Aggregation mappings |
 | `data/Add_sectors.xlsx` | PV supply-chain activities, commodities and inventories |
 | `config/parameters.yaml` | GWP, cost, lifetime and inventory constants |
@@ -34,6 +36,26 @@ Prepared model
 The model retains the existing hybrid units and regional/technological scope.
 Substituting another IO database or adding a PV technology requires updating and
 validating the associated mappings and inventories.
+
+## Automatic source acquisition
+
+`pv-hlca download` writes `models/source-18744457/` by default. The record's TXT
+matrices use comma-separated values with three column-header levels; they are
+converted in row chunks with round-trip float parsing. The cache contains:
+
+```text
+models/source-18744457/
+  zenodo-txt/        # verified originals; .part files allow interrupted downloads to resume
+  *.parquet         # z, v, e, Y, EY and units
+  zenodo-source.json # pinned source metadata, converter version, converted-file SHA-256 hashes
+```
+
+Only verified downloads are converted. The completion receipt is written after
+all six Parquets are complete; subsequent use verifies their hashes without
+contacting Zenodo. Downloaded source checksums are retained in this receipt;
+the preparation manifest separately records the converted input hashes.
+Existing local source directories and prepared bundles take precedence. See
+[installation](installation.md) for cache paths and offline operation.
 
 ## Prepared bundles
 

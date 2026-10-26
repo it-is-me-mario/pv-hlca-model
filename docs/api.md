@@ -19,8 +19,12 @@ model = PVModel.load("models/prepared", parameters)
 
 - `PVModel.load(path, parameters=None, *, cfg=None)` verifies and loads an existing
   bundle. It does not read the original base database.
-- `PVModel.build(parameters=None, *, cfg=None, prepared_path=None)` builds from
-  source; if `prepared_path` is supplied it creates or reuses that bundle.
+- `PVModel.build(parameters=None, *, cfg=None, prepared_path=None, download=True,
+  source_path=None)` builds from source; if `prepared_path` is supplied it creates
+  or reuses that bundle. Missing sources are downloaded from the fixed Zenodo
+  record and converted automatically. `source_path` selects the download cache
+  (default `models/source-18744457`). Set `download=False` for offline operation.
+  An existing prepared bundle does not need source acquisition.
 - `io.load_config(path=None, *, base_db=None)` loads advanced source configuration.
   Relative paths in a custom `config/paths.yaml` resolve against its parent root,
   matching the repository layout. `base_db` overrides only the raw input directory.
@@ -28,8 +32,18 @@ model = PVModel.load("models/prepared", parameters)
 ```python
 from pv_hlca import io
 cfg = io.load_config(base_db="/path/to/SUT/parquets")
-model = PVModel.build(parameters, cfg=cfg, prepared_path="models/prepared")
+model = PVModel.build(parameters, cfg=cfg, prepared_path="models/prepared", download=False)
 ```
+
+Or start with no database files:
+
+```python
+model = PVModel.build(parameters, prepared_path="models/prepared")
+```
+
+`pv_hlca.download.download_database(destination="models/source-18744457")`
+downloads, verifies and converts only the source, returning its resolved path.
+It reuses a verified complete cache offline. Preparation remains a separate stage.
 
 ## Add independent scenarios
 

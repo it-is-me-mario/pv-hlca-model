@@ -1,0 +1,61 @@
+{
+  "source_record": 18744457,
+  "rtol": 1e-12,
+  "atol": 1e-15,
+  "matrices": {
+    "units": {
+      "rows": 763,
+      "columns": 1,
+      "max_absolute_difference": 0.0,
+      "exact_values": true,
+      "seconds": 0.02
+    },
+    "v": {
+      "rows": 8,
+      "columns": 18768,
+      "max_absolute_difference": 5.293955920339377e-23,
+      "exact_values": false,
+      "seconds": 1.09
+    },
+    "e": {
+      "rows": 364,
+      "columns": 18768,
+      "max_absolute_difference": 5.293955920339377e-23,
+      "exact_values": false,
+      "seconds": 2.53
+    },
+    "Y": {
+      "rows": 18768,
+      "columns": 288,
+      "max_absolute_difference": 1.504632769052528e-36,
+      "exact_values": false,
+      "seconds": 2.19
+    },
+    "EY": {
+      "rows": 364,
+      "columns": 288,
+      "max_absolute_difference": 6.617444900424222e-24,
+      "exact_values": false,
+      "seconds": 0.06
+    },
+    "z": {
+      "rows": 18768,
+      "columns": 18768,
+      "max_absolute_difference": 5.293955920339377e-23,
+      "exact_values": false,
+      "seconds": 100.92
+    }
+  },
+  "verified_on": "2026-10-26",
+  "all_labels_and_units_match": true,
+  "all_numeric_cells_pass": true,
+  "optional_VY": {
+    "available_on_zenodo": false,
+    "original_shape": [
+      8,
+      288
+    ],
+    "original_max_absolute_value": 0.0,
+    "handled_as": "MARIO zero default"
+  }
+}

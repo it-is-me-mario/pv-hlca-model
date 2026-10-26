@@ -9,6 +9,7 @@ import sys
 from . import io, prepared
 from .experiment import Experiment
 from .model import PVModel
+from .download import download_database, source_config, DEFAULT_DIRECTORY
 
 
 def main(argv=None):
@@ -16,6 +17,8 @@ def main(argv=None):
     commands = parser.add_subparsers(dest="command", required=True)
     check = commands.add_parser("check", help="Validate an experiment without loading the database")
     check.add_argument("experiment", type=Path)
+    download = commands.add_parser("download", help="Download and verify the fixed Zenodo database, then convert to Parquet")
+    download.add_argument("--output", type=Path, default=DEFAULT_DIRECTORY, help="Source cache directory (default: models/source-18744457)")
     prep = commands.add_parser("prepare", help="Prepare a reusable database bundle once")
     run = commands.add_parser("run", help="Run an experiment and export comparisons")
     for command in (prep, run):
@@ -23,12 +26,17 @@ def main(argv=None):
         command.add_argument("--base-db", type=Path, help="Original SUT parquet directory; only needed for preparation")
         command.add_argument("--config", type=Path, help="Advanced: alternate config/paths.yaml")
         command.add_argument("--verbose", action="store_true", help="Show detailed MARIO calculation logs")
+        command.add_argument("--offline", action="store_true", help="Use local files and caches only; never download")
+        command.add_argument("--download-dir", type=Path, default=DEFAULT_DIRECTORY, help="Source download/cache directory")
     run.add_argument("experiment", type=Path)
     run.add_argument("--output", type=Path, help="Results directory (default: outputs/<experiment file stem>)")
     run.add_argument("--heavy", action="store_true", help="Also compute disaggregated footprints")
     run.add_argument("--overwrite", action="store_true", help="Replace existing result files in the output directory")
     args = parser.parse_args(argv)
     try:
+        if args.command == "download":
+            download_database(args.output)
+            return 0
         if args.command == "check":
             experiment = Experiment.load(args.experiment)
             print(json.dumps(experiment.as_dict(), indent=2))
@@ -40,6 +48,8 @@ def main(argv=None):
         if args.command == "prepare":
             if not (args.prepared / "manifest.json").is_file():
                 print("Preparing the PV database for first use; this can take several minutes.", flush=True)
+                cfg = source_config(cfg, download=not args.offline and args.base_db is None,
+                                    directory=args.base_db if args.base_db is not None else args.download_dir)
             db, manifest = prepared.prepare(cfg, args.prepared)
             print(f"Prepared model: {args.prepared.resolve()} ({len(db.get_index('Region'))} regions)")
             print(f"Base source: {manifest['source']}")
@@ -51,7 +61,9 @@ def main(argv=None):
         print(f"{experiment.title}: loading model with {len(experiment.scenarios)} scenario(s)", flush=True)
         if not (args.prepared / "manifest.json").is_file():
             print("Preparing the PV database for first use; this can take several minutes.", flush=True)
-        model = PVModel.build(experiment.parameters, cfg=cfg, prepared_path=args.prepared)
+        model = PVModel.build(experiment.parameters, cfg=cfg, prepared_path=args.prepared,
+                              download=not args.offline and args.base_db is None,
+                              source_path=args.base_db if args.base_db is not None else args.download_dir)
         for spec in experiment.scenarios:
             print(f"Adding {spec.name} (from {spec.preset})", flush=True)
             model.add_scenario(spec)
@@ -60,7 +72,7 @@ def main(argv=None):
         print(f"Results and assumptions: {out}")
         print("Compare footprints.csv and prices.csv by scenario; run.json records provenance and units.")
         return 0
-    except (ValueError, FileNotFoundError, KeyError) as exc:
+    except (ValueError, OSError, KeyError) as exc:
         print(f"PV-HLCA: {exc}", file=sys.stderr)
         return 2
 

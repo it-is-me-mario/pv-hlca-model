@@ -32,17 +32,23 @@ class PVModel:
         scenarios.build_baseline_trade(self.db, self.cfg)
 
     @classmethod
-    def build(cls, parameters=None, *, cfg=None, prepared_path=None):
+    def build(cls, parameters=None, *, cfg=None, prepared_path=None, download=True, source_path=None):
         """Build from source, or create/reuse a verified prepared bundle.
 
         Construct a new model when changing technology parameters. Each scenario
         added to that model shares those parameters and starts independently.
+        Missing source files are downloaded and converted in ``source_path``;
+        ``download=False`` requires local data or a verified complete cache.
         """
         parameters = parameters or ModelParameters()
         if not isinstance(parameters, ModelParameters):
             raise TypeError("parameters must be ModelParameters")
         cfg = copy.deepcopy(cfg if cfg is not None else io.load_config())
         provenance = {}
+        if prepared_path is None or not (Path(prepared_path) / "manifest.json").is_file():
+            from .download import source_config, DEFAULT_DIRECTORY
+            cfg = source_config(cfg, download=download,
+                                directory=source_path if source_path is not None else DEFAULT_DIRECTORY)
         if prepared_path is None:
             db = pipeline.prepare_database(cfg)
             provenance = {

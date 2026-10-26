@@ -33,22 +33,60 @@ scoped to this model environment; optional cvxlab workflows are not installed.
 
 ## Obtain the source database
 
-The fixed source is [Zenodo record 18744457](https://doi.org/10.5281/zenodo.18744457).
-Use the **SUT coefficient** parquet directory, containing `z.parquet`, `v.parquet`,
-`e.parquet`, `Y.parquet`, `EY.parquet`, `units.parquet` and `VY.parquet` when present.
+No manual data setup or Zenodo account is needed. If neither a prepared bundle
+nor complete local source files are available, `pv-hlca prepare` and `pv-hlca run`
+download the six required files from the fixed
+[Zenodo record 18744457](https://doi.org/10.5281/zenodo.18744457).
+The record provides **comma-separated TXT matrices**, not Parquet. The downloader
+verifies the published file sizes and MD5 checksums, then converts them to Parquet
+in row chunks. It does not download the diagnostic ZIP or PDF. `VY` is absent
+from this source and is handled by MARIO as in the original model.
+
+The first download is **1.78 GB** and may take several minutes, depending on your
+connection, before preparation and calculation begin. Allow about **3 GB of free
+disk space** for retained original TXT files, converted matrices and the prepared
+bundle, plus space for your outputs. The original TXT files are kept for provenance.
+Interrupted transfers resume when you rerun the same command.
+
+```bash
+pv-hlca run examples/eu_reshoring.yaml
+```
+
+To download ahead of time, or place the source cache on another disk:
+
+```bash
+pv-hlca download --output /path/to/source-18744457
+pv-hlca prepare --download-dir /path/to/source-18744457 --offline
+pv-hlca run examples/eu_reshoring.yaml --offline
+```
+
+The default source cache is `models/source-18744457/`, relative to the working
+directory. A completed cache is reused without network access and its Parquet
+SHA-256 hashes are checked before reuse. `--offline` prohibits downloads and gives
+an actionable error when neither a prepared bundle nor a valid local source exists.
+The checked-in `config/zenodo-source.json` pins the record, download URLs, sizes and
+checksums: no lookup of a changing “latest” record occurs.
+
+### Existing local files
+
+A complete **SUT coefficient** Parquet directory can still be used directly:
+`z.parquet`, `v.parquet`, `e.parquet`, `Y.parquet`, `EY.parquet`, `units.parquet`
+and optional `VY.parquet`. Place it in `inputs/db_from_zenodo/` or pass `--base-db`.
+An explicit `--base-db` selects local files and disables automatic download fallback.
 Do not substitute a newer database version in a reproduction run.
 
-- Put the files in `inputs/db_from_zenodo/`, or pass `--base-db /path/to/the/files`.
-- A Git checkout includes some files directly and large ones through Git LFS;
-  `git lfs pull` retrieves the actual large objects.
-- A small text file beginning `version https://git-lfs...` is a pointer, not the
-  database. The model reports this before attempting to parse it.
+Some original files are tracked directly in Git and the large matrix uses Git LFS.
+`git lfs pull` is an alternative when those objects are available. LFS pointers
+are detected as missing data by the automatic workflow; they are never parsed
+as matrices. Downloads go to their own cache and do not overwrite tracked inputs
+or existing unmanaged Parquet directories.
 
 ```bash
 pv-hlca prepare --base-db /path/to/SUT/parquets --prepared models/prepared
 pv-hlca run examples/eu_reshoring.yaml --prepared models/prepared
 ```
 
-If you receive a prepared bundle, the second command needs no raw input directory.
+If you receive a prepared bundle, the second command needs no raw input directory
+or network access. Adding the downloader does not invalidate existing prepared bundles.
 Preparation and model calculation are full MRIO operations; the first build is
 more expensive than loading a prepared model. Runtime depends on your hardware.

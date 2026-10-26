@@ -8,16 +8,20 @@ preset; scenarios listed later do not inherit changes from earlier ones.
 
 Follow [installation](installation.md). If you received a complete prepared bundle
 from a collaborator using this code version, place it at `models/prepared/`.
-Otherwise the first `run` prepares it automatically from the base database.
-You can also prepare it explicitly:
+Otherwise the first `run` downloads any missing source from the fixed Zenodo record
+(1.78 GB), verifies it, converts its TXT matrices and prepares the model automatically.
+You can also download and prepare it explicitly:
 
 ```bash
-pv-hlca prepare --base-db /path/to/SUT/parquets --prepared models/prepared
+pv-hlca download
+pv-hlca prepare --offline --prepared models/prepared
 ```
 
 Preparation is the expensive step. The bundle is independent of technology
 parameters, trade scenarios and grid assumptions. It contains coefficient parquet
 files and a manifest recording source checksums and the preparation recipe.
+Subsequent runs can use `--offline`; no download is needed with a matching prepared
+bundle. Existing source Parquets remain supported through `--base-db /path/to/SUT/parquets`.
 
 ## 2. Define an experiment
 

@@ -1,0 +1,54 @@
+{
+  "record_id": 18744457,
+  "doi": "10.5281/zenodo.18744457",
+  "files": [
+    {
+      "key": "units.txt",
+      "size": 40425,
+      "checksum": "md5:ae31001c2366d770815897f3f1061582",
+      "links": {
+        "self": "https://zenodo.org/api/records/18744457/files/units.txt/content"
+      }
+    },
+    {
+      "key": "Y.txt",
+      "size": 25939313,
+      "checksum": "md5:7aac2ac2a3c8c31e00a599467bb12f9c",
+      "links": {
+        "self": "https://zenodo.org/api/records/18744457/files/Y.txt/content"
+      }
+    },
+    {
+      "key": "e.txt",
+      "size": 42273452,
+      "checksum": "md5:0e1a74806a3d745cea7a64e112298518",
+      "links": {
+        "self": "https://zenodo.org/api/records/18744457/files/e.txt/content"
+      }
+    },
+    {
+      "key": "EY.txt",
+      "size": 620930,
+      "checksum": "md5:4f3628107e84af39a3311746cc303c17",
+      "links": {
+        "self": "https://zenodo.org/api/records/18744457/files/EY.txt/content"
+      }
+    },
+    {
+      "key": "v.txt",
+      "size": 2368938,
+      "checksum": "md5:861b55862520dca763f9cc2f04566347",
+      "links": {
+        "self": "https://zenodo.org/api/records/18744457/files/v.txt/content"
+      }
+    },
+    {
+      "key": "z.txt",
+      "size": 1706265266,
+      "checksum": "md5:57c5c675af8221ba05ec9df3390aa13a",
+      "links": {
+        "self": "https://zenodo.org/api/records/18744457/files/z.txt/content"
+      }
+    }
+  ]
+}
