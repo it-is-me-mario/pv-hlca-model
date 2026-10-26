@@ -1,0 +1,27 @@
+title: EU photovoltaic supply-chain scenarios
+
+# Shared technology assumptions. Fractions, not percentages.
+parameters:
+  capacity_factor: OWID
+  module_efficiency: 0.22
+  degradation_rate: 0.005
+  lci_variant: IEA
+
+# Each scenario is independent. The commercial baseline is always included.
+scenarios:
+  - name: eu_modules_60
+    preset: baseline
+    domestic_shares:
+      EU27:
+        PV modules: 0.60
+
+  - name: eu_modules_and_cells
+    preset: baseline
+    domestic_shares:
+      EU27:
+        PV modules: 0.60
+        Cells: 0.40
+
+  - name: published_nzia
+    preset: NZIA
+    grid_source: WEO_STEPS

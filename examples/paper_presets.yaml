@@ -1,0 +1,13 @@
+title: Published scenario presets at reference technology assumptions
+parameters:
+  capacity_factor: OWID
+  module_efficiency: 0.195
+  degradation_rate: 0.0
+  lci_variant: IEA
+scenarios:
+  - name: all_domestic
+    preset: domestic
+  - name: NZIA
+    preset: NZIA
+  - name: baseline_2030
+    preset: baseline_2030

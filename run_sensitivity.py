@@ -16,6 +16,7 @@ and impact-linkage figures need.
     python run_sensitivity.py --heavy    # + disaggregated + decomposition data (all figures)
     python run_sensitivity.py --quick    # central case only (smoke test)
     python run_sensitivity.py --fresh    # ignore existing runs/, recompute all
+    python run_sensitivity.py --offline # require local source files/cache
 """
 import sys
 import time
@@ -23,6 +24,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 from pv_hlca import io, export                       # noqa: E402
+from pv_hlca.download import source_config           # noqa: E402
 from pv_hlca.params import Params                    # noqa: E402
 
 
@@ -31,7 +33,7 @@ def main(argv):
     quick = "--quick" in argv
     fresh = "--fresh" in argv
     full = "--full" in argv
-    cfg = io.load_config()
+    cfg = source_config(io.load_config(), download="--offline" not in argv)
     if quick:
         grid = [Params()]
     elif full:

@@ -1,0 +1,51 @@
+{
+  "footprints": {
+    "pass": true,
+    "rows": 88,
+    "max_absolute_difference": 3.177969887246945e-08,
+    "strict_numeric_pass": true,
+    "rtol": 1e-08,
+    "atol": 1e-09
+  },
+  "prices": {
+    "pass": true,
+    "rows": 88,
+    "max_absolute_difference": 2.8169541699263334e-10,
+    "strict_numeric_pass": true,
+    "rtol": 1e-08,
+    "atol": 1e-09
+  },
+  "production": {
+    "pass": true,
+    "rows": 528,
+    "max_absolute_difference": 0.0002956390380859375,
+    "strict_numeric_pass": true,
+    "rtol": 1e-08,
+    "atol": 1e-09
+  },
+  "value_added": {
+    "pass": true,
+    "rows": 352,
+    "max_absolute_difference": 0.0018671138677746058,
+    "strict_numeric_pass": true,
+    "rtol": 1e-08,
+    "atol": 1e-09
+  },
+  "employment": {
+    "pass": true,
+    "rows": 18040,
+    "max_absolute_difference": 0.0001247879486356851,
+    "strict_numeric_pass": false,
+    "rtol": 1e-08,
+    "atol": 0.001,
+    "max_difference_persons": 0.1247879486356851
+  },
+  "headline": {
+    "pass": true,
+    "rows": 4,
+    "max_absolute_difference": 0.048130035400390625,
+    "strict_numeric_pass": true,
+    "rtol": 1e-08,
+    "atol": 1e-09
+  }
+}

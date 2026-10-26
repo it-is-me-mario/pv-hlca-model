@@ -1,0 +1,29 @@
+name: Model checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-model.txt
+      - name: Install PV runtime and pinned engine
+        run: |
+          python -m pip install -r requirements-model.txt pytest
+          python -m pip install --no-deps mariopy==1.0.0 -e .
+      - name: Check numerical contracts and experiment validation
+        run: python -m pytest -q
+      - name: Check documentation and example notebook
+        run: python tools/check_docs.py
+      - name: Build installable distribution
+        run: python -m pip wheel --no-deps . --wheel-dir dist

@@ -17,6 +17,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 from pv_hlca import io, pipeline, indicators  # noqa: E402
+from pv_hlca.params import Params
 
 TOL_MEDIAN = 10.0   # % — declared marginal tolerance vs the older published base
 
@@ -24,7 +25,7 @@ TOL_MEDIAN = 10.0   # % — declared marginal tolerance vs the older published b
 def main(variant: str = "RN") -> int:
     cfg = io.load_config()
     print(f"Building pipeline (variant={variant}) ...", flush=True)
-    db = pipeline.build_database(cfg, variant=variant)
+    db = pipeline.build_database(cfg, Params(capacity_factor=variant))
 
     mine = indicators.solar_footprint(db, cfg, "baseline", g_per_kwh=False)
     refcol = {"RN": "new_footprints_RN", "OWID": "new_footprints_OWID"}[variant]

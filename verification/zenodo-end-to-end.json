@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-26",
+  "source_record": 18744457,
+  "fresh_preparation": true,
+  "installed_wheel_outside_checkout": true,
+  "offline_execution": true,
+  "output_hashes_verified": true,
+  "baseline_comparison": {
+    "footprints": {
+      "rows": 22,
+      "pass": true,
+      "max_absolute_difference": 1.1619860629252798e-09,
+      "rtol": 1e-08,
+      "atol": 1e-09
+    },
+    "prices": {
+      "rows": 22,
+      "pass": true,
+      "max_absolute_difference": 1.542369010287814e-11,
+      "rtol": 1e-08,
+      "atol": 1e-09
+    },
+    "production": {
+      "rows": 132,
+      "pass": true,
+      "max_absolute_difference": 2.485513687133789e-05,
+      "rtol": 1e-08,
+      "atol": 1e-09
+    },
+    "value_added": {
+      "rows": 88,
+      "pass": true,
+      "max_absolute_difference": 0.0009667460108175874,
+      "rtol": 1e-08,
+      "atol": 1e-09
+    },
+    "employment": {
+      "rows": 4510,
+      "pass": true,
+      "max_absolute_difference": 5.9838526581756923e-05,
+      "rtol": 1e-08,
+      "atol": 0.001
+    },
+    "headline": {
+      "rows": 1,
+      "pass": true,
+      "max_absolute_difference": 0.00850677490234375,
+      "rtol": 1e-08,
+      "atol": 1e-09
+    }
+  },
+  "scenario_EU27_footprint_gkwh": {
+    "baseline": 51.25053541695096,
+    "eu_modules_60": 46.760618507864955
+  },
+  "elapsed_seconds_excluding_download_and_conversion": 613.58
+}

@@ -1,0 +1,18 @@
+# Runtime for the IO model. MARIO is installed without its conflicting optional
+# optimisation dependency by tools/install.py; do not use this for cvxlab models.
+numpy==2.1.1
+pandas==3.0.2
+openpyxl==3.1.5
+xlsxwriter==3.2.9
+pint==0.25.3
+PyYAML==6.0.3
+pyarrow==26.0.0
+matplotlib==3.11.2
+pymrio==0.7.0
+country_converter==1.3.2
+plotly==7.1.0
+tabulate==0.10.0
+scipy==1.18.1
+h5py==3.16.0
+pyxlsb==1.0.10
+ipython>=8.27

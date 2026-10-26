@@ -49,18 +49,20 @@ def apply_import_structure(u: pd.DataFrame, commodity: str, rows: pd.DataFrame,
         row = (imp_region, "Commodity", commodity)
         if row not in u.index:
             continue
-        for col in activity_cols:
-            use_value = u.loc[row, col]
-            if use_value == 0:
-                continue
-            u.loc[row, col] = 0.0
-            if imp_region in import_matrix.index:
-                for exp_region in import_matrix.columns:
-                    share = import_matrix.loc[imp_region, exp_region]
-                    if share > 0:
-                        new_row = (exp_region, "Commodity", commodity)
-                        if new_row in u.index:
-                            u.loc[new_row, col] += use_value * share
+        # Columns are independent. Transfer the entire row at once while keeping
+        # the historical region order (including its sequential redistribution).
+        # This avoids hundreds of thousands of scalar DataFrame lookups per run.
+        values = u.loc[row, activity_cols].to_numpy(copy=True)
+        if not np.any(values):
+            continue
+        u.loc[row, activity_cols] = 0.0
+        if imp_region in import_matrix.index:
+            for exp_region in import_matrix.columns:
+                share = import_matrix.loc[imp_region, exp_region]
+                if share > 0:
+                    new_row = (exp_region, "Commodity", commodity)
+                    if new_row in u.index:
+                        u.loc[new_row, activity_cols] += values * share
     return u
 
 
@@ -125,29 +127,33 @@ def build_baseline_trade(db, cfg) -> None:
     db.reset_to_coefficients(scenario="baseline")
 
 
-def apply_nzia_shocks(db, cfg, upstream_reshoring: float | None = None) -> None:
+def apply_nzia_shocks(db, cfg, upstream_reshoring: float | None = None, *, scenario="NZIA") -> None:
     """Apply the NZIA import structure + EU transport decrease and construction
     increase to an existing 'NZIA' scenario (cloned earlier from the pre-import
     baseline). ``upstream_reshoring`` optionally forces EU27's domestic
     share of the upstream PV commodities."""
-    u = _apply_imports_to_scenario(db, cfg, "NZIA", "NZIA",
+    u = _apply_imports_to_scenario(db, cfg, scenario, "NZIA",
                                    upstream_reshoring=upstream_reshoring)
+    assumptions = cfg["scenario_2030"].get("nzia", {})
     # oceanic transport decrease (x0.6) for EU27 PV production activities
     sea = ("EU27", "Commodity", "Sea and coastal water transportation services")
     constr = ("EU27", "Commodity", "Construction work (45)")
     for com in PV_IMPORT_COMMODITIES:
         act = ("EU27", "Activity", f"{com} production")
         if sea in u.index and act in u.columns:
-            u.loc[sea, act] *= 0.6
+            u.loc[sea, act] *= assumptions.get("sea_transport_multiplier", 0.6)
     # construction-work increase for EU27 module/cell/wafer plants (M€/m2)
-    for act_item, value in [("PV modules production", 0.00001),
-                            ("Cells production", 0.00002),
-                            ("Wafer production", 0.000025)]:
+    construction = assumptions.get("construction_coefficients", {
+        "PV modules production": 0.00001,
+        "Cells production": 0.00002,
+        "Wafer production": 0.000025,
+    })
+    for act_item, value in construction.items():
         act = ("EU27", "Activity", act_item)
         if constr in u.index and act in u.columns:
             u.loc[constr, act] = value
-    db.update_scenarios(scenario="NZIA", u=u)
-    db.reset_to_coefficients(scenario="NZIA")
+    db.update_scenarios(scenario=scenario, u=u)
+    db.reset_to_coefficients(scenario=scenario)
 
 
 def _project_region_grid_2030(Yc, u, region: str, target: dict, const: float) -> None:
@@ -191,18 +197,27 @@ def build_2030(db, cfg, mix_source: str = "WEO_STEPS") -> None:
     and therefore applied to the EU27 only; other regions (e.g. CN) keep their 2024
     demand level while their grid is decarbonised to the 2030 mix."""
     db.clone_scenario(scenario="baseline", name="baseline_2030")
+    for scen in ["baseline_2030", "NZIA"]:
+        apply_paper_2030(db, cfg, scen, mix_source)
+
+
+def apply_paper_2030(db, cfg, scenario, mix_source="WEO_STEPS"):
+    """Apply the published grid/demand prescription to one existing scenario.
+
+    Kept separate from custom mix rotation so historical presets retain their
+    original numerical prescription. See docs/scenarios.md for the distinction.
+    """
     table = cfg["scenario_2030"]["electricity_mix_2030"][mix_source]
     regions_mix = {k: v for k, v in table.items() if not k.startswith("_")}
     const = float(cfg["scenario_2030"].get("household_demand_constant", 460 * 3600))
     demand_region = cfg["scenario_2030"].get("demand_growth_region", "EU27")
-    for scen in ["baseline_2030", "NZIA"]:
-        Yc = db.query(matrices="Yc", scenarios=scen).copy()
-        u = db.query(matrices="u", scenarios=scen).copy()
-        for region, target in regions_mix.items():
-            _project_region_grid_2030(Yc, u, region, target,
-                                      const if region == demand_region else 0.0)
-        db.update_scenarios(scenario=scen, Yc=Yc, u=u)
-        db.reset_to_coefficients(scenario=scen)
+    Yc = db.query(matrices="Yc", scenarios=scenario).copy()
+    u = db.query(matrices="u", scenarios=scenario).copy()
+    for region, target in regions_mix.items():
+        _project_region_grid_2030(Yc, u, region, target,
+                                  const if region == demand_region else 0.0)
+    db.update_scenarios(scenario=scenario, Yc=Yc, u=u)
+    db.reset_to_coefficients(scenario=scenario)
 
 
 def build_all_scenarios(db, cfg, mix_source: str = "WEO_STEPS",

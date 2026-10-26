@@ -3,8 +3,9 @@
 
 # --- Base hybrid-units MRIO (EXIOBASE + H2 + green steel), pre-aggregation ---
 # Zenodo record 18744457 (https://zenodo.org/records/18744457).
-# Download the SUT coefficient parquet files (z, v, e, Y, EY, units) into this folder.
-# This folder is git-ignored (large); fetch it from Zenodo on a fresh checkout.
+# Legacy local SUT Parquets (some tracked, z uses Git LFS). When incomplete,
+# pv-hlca prepare/run download the fixed record's TXT matrices and convert them
+# in models/source-18744457 instead. See config/zenodo-source.json.
 base_db:
   path: "inputs/db_from_zenodo"
   table: "SUT"
