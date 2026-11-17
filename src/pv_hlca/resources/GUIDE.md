@@ -35,10 +35,16 @@ The model can also be used directly with MARIO 1.3.4:
     model = Project("./pv-study")
 
 Use `mario.models.install("pv-hlca", ref="your-branch")` to install an
-experimental branch, tag or full commit. To edit the code, clone the
-repository, check out the branch and run `python -m pip install -e .` from
-its root. Use separate Python environments for different model versions.
-Set `GIT_LFS_SKIP_SMUDGE=1` when cloning if you plan to use the data cache.
+experimental branch, tag or full commit. To install directly from GitHub,
+replace `<ref>` with the revision you want:
+
+    GIT_LFS_SKIP_SMUDGE=1 python -m pip install "mario-pv-hlca @ git+https://github.com/it-is-me-mario/pv-hlca-model.git@<ref>"
+
+To edit the code, clone the repository, check out the branch and run
+`python -m pip install -e .` from its root. Use separate Python environments
+for different model versions and separate workspaces for experiments that
+use different input structures. Set `GIT_LFS_SKIP_SMUDGE=1` when cloning if
+you plan to use the data cache.
 
 ## Data
 
