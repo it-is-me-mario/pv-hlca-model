@@ -1,0 +1,10 @@
+Electricity,Hydrogen
+Coal,Coal gasification hydrogen
+Gas,Coal gasification hydrogen with CCS
+Nuclear,Electrolysis hydrogen
+Hydro,Steam reforming hydrogen
+Wind,Steam reforming hydrogen with CCS
+Other Fossil,
+Solar,
+Other Renewables,
+Bioenergy,

@@ -9,16 +9,23 @@ price, production, value added and employment of solar electricity across world 
 and policy scenarios, on `mario==1.0.0`. The whole study is **parametric**: each modelling
 choice is a named lever and the analysis is a global sensitivity sweep over their values.
 
-## Quick start
+## Run as a MARIO model
+
+The [PV-HLCA guide](src/pv_hlca/resources/GUIDE.md) covers installation, the
+versioned background data, editable YAML/CSV inputs, and retrieving results.
+Use a model branch or an editable checkout to change the code.
+
+## Archived analysis workflow
 
 ```bash
 conda env create -f environment.yml
 conda activate pv_hlca
 ```
 
-Download the base hybrid-units database from **Zenodo record 18744457**
-(<https://zenodo.org/records/18744457>) and place its SUT parquet files in
-`inputs/db_from_zenodo/` (the folder is git-ignored; the path is set in `config/paths.yaml`).
+The archived workflow reads the Parquet copy of the base hybrid-units database
+([Zenodo record 18744457](https://zenodo.org/records/18744457)) from
+`inputs/db_from_zenodo/` (path set in `config/paths.yaml`). The largest matrix
+uses Git LFS.
 Then either open the notebook, which runs everything from the raw database to the figures, or
 use the headless drivers:
 

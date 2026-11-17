@@ -1,0 +1,114 @@
+# PV-HLCA parameters — extracted verbatim from thesis script (IRENA 2024, etc.)
+W_per_m2: 195                       # = module_efficiency_ref * 1000 W/m2 (STC)
+module_efficiency_ref: 0.195       # reference module efficiency baked into the inventory
+usd_to_eur: 0.9272137227630969
+use_of_PV_m2_per_TJ: 50.1494668259254
+lifetime_years: 25
+om_labor_share: 0.35
+# LCI sensitivity (R2.4): electricity intensity of the upstream PV stages under two
+# published inventories. Reference = IEA PVPS Task 12 (2020, baked into Add_sectors.xlsx);
+# variant = NREL (Smith et al. 2024, DOI 10.2172/2331433). The 'NREL' lever scales the
+# Electricity coefficient of each '<stage> production' activity by nrel/iea (Excel untouched).
+lci_electricity_kwh_per_kg:           # per kg of stage output
+  Solar Grade silicon: {iea: 49.0,  nrel: 72.0}    # x1.469
+  Ingot:               {iea: 32.0,  nrel: 38.4}    # x1.200
+  Wafer:               {iea: 4.762, nrel: 2.35}    # x0.494
+  Metallurgical Grade silicon: {iea: 11.0, nrel: 11.0}   # x1.000 (unchanged)
+gwp_factors:                         # IPCC AR6 GWP-100 (matches mario calc_ghg AR6 profile)
+  Carbon dioxide: 1
+  N2O: 273
+  CH4: 29.8
+kWh_per_TJ_to_g_factor: 3.6
+irena:
+  total_capex_usd_per_w:
+    AU: 0.944
+    BR: 0.724
+    CA: 1.206
+    CH: 0.779
+    CN: 0.591
+    EU27: 0.779
+    GB: 0.779
+    ID: 1.133
+    IN: 0.525
+    JP: 1.133
+    KR: 1.133
+    MX: 1.206
+    'NO': 0.779
+    RU: 1.03
+    TR: 1.03
+    US: 1.058
+    WA: 1.133
+    WE: 0.779
+    WF: 1.093
+    WL: 1.048
+    WM: 1.03
+    ZA: 1.093
+  installation_labor_fraction:
+    AU: 0.18
+    BR: 0.15
+    CA: 0.28
+    CH: 0.25
+    CN: 0.18
+    EU27: 0.18
+    GB: 0.25
+    ID: 0.1
+    IN: 0.11
+    JP: 0.22
+    KR: 0.14
+    MX: 0.2
+    'NO': 0.25
+    RU: 0.15
+    TR: 0.18
+    US: 0.27
+    WA: 0.18
+    WE: 0.18
+    WF: 0.18
+    WL: 0.2
+    WM: 0.18
+    ZA: 0.18
+  pv_modules_fraction:
+    AU: 0.28
+    BR: 0.25
+    CA: 0.27
+    CH: 0.3
+    CN: 0.25
+    EU27: 0.3
+    GB: 0.24
+    ID: 0.31
+    IN: 0.32
+    JP: 0.15
+    KR: 0.32
+    MX: 0.28
+    'NO': 0.3
+    RU: 0.31
+    TR: 0.28
+    US: 0.3
+    WA: 0.28
+    WE: 0.28
+    WF: 0.28
+    WL: 0.3
+    WM: 0.28
+    ZA: 0.28
+  o_and_m_usd_per_kw_year:
+    AU: 6.99
+    BR: 6.6
+    CA: 6.6
+    CH: 7.3
+    CN: 3.2
+    EU27: 7.3
+    GB: 7.3
+    ID: 5.2
+    IN: 5.2
+    JP: 10.7
+    KR: 5.2
+    MX: 6.6
+    'NO': 7.3
+    RU: 7.1
+    TR: 7.1
+    US: 6.6
+    WA: 5.2
+    WE: 7.3
+    WF: 6.99
+    WL: 6.6
+    WM: 5.6
+    ZA: 6.99

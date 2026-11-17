@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mario-pv-hlca"
+version = "1.1.0.dev0"
+description = "Photovoltaic supply chain model for MARIO"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = ["mariopy>=1.3.4,<1.4", "PyYAML", "openpyxl"]
+
+[project.urls]
+Repository = "https://github.com/it-is-me-mario/pv-hlca-model"
+Publication = "https://doi.org/10.1007/s44498-026-00175-0"
+
+[project.entry-points."mario.models"]
+pv-hlca = "pv_hlca.project:Project"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pv_hlca"]
+
+[tool.setuptools.package-data]
+pv_hlca = [
+    "resources/*.yaml", "resources/*.md",
+    "resources/inputs/*.yaml", "resources/inputs/*.csv",
+    "resources/inputs/aggregation/*.csv", "resources/inputs/pv_inventory/*.csv"
+]

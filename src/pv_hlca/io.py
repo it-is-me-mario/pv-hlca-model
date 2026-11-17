@@ -21,7 +21,8 @@ def load_config() -> dict:
     cfg["_root"] = root
     cfg["base_db"]["_path"] = resolve(cfg["base_db"]["path"])
     for k, v in cfg["data"].items():
-        cfg["data"][k] = resolve(v)
+        if v is not None:
+            cfg["data"][k] = resolve(v)
     for k, v in cfg["outputs"].items():
         cfg["outputs"][k] = resolve(v)
     # load nested config files

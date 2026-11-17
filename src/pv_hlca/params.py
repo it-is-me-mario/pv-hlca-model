@@ -28,7 +28,18 @@ Axes & references
 from __future__ import annotations
 from dataclasses import dataclass, replace
 from itertools import product
+from math import isfinite
 from typing import Iterable
+
+
+PARAMETER_INFO = {
+    "capacity_factor": "Regional capacity factor source (OWID or RN).",
+    "electricity_mix": "2030 grid projection (WEO_STEPS for EU27 and China or EMBER for EU27).",
+    "module_efficiency": "Module efficiency as a fraction, greater than 0 and at most 1.",
+    "upstream_reshoring": "NZIA EU27 domestic share for upstream stages (null or 0–1).",
+    "degradation_rate": "Annual output degradation as a fraction, from 0 up to but excluding 1.",
+    "lci_variant": "Upstream-stage electricity inventory (IEA or NREL).",
+}
 
 
 @dataclass(frozen=True)
@@ -39,6 +50,28 @@ class Params:
     upstream_reshoring: float | None = None
     degradation_rate: float = 0.0
     lci_variant: str = "IEA"
+
+    def validate(self) -> None:
+        choices = {
+            "capacity_factor": ("OWID", "RN"),
+            "electricity_mix": ("WEO_STEPS", "EMBER"),
+            "lci_variant": ("IEA", "NREL"),
+        }
+        for name, allowed in choices.items():
+            if getattr(self, name) not in allowed:
+                raise ValueError(f"{name}: {PARAMETER_INFO[name]}")
+
+        fractions = {
+            "module_efficiency": lambda x: 0 < x <= 1,
+            "degradation_rate": lambda x: 0 <= x < 1,
+            "upstream_reshoring": lambda x: 0 <= x <= 1,
+        }
+        for name, check in fractions.items():
+            value = getattr(self, name)
+            if name == "upstream_reshoring" and value is None:
+                continue
+            if type(value) not in (float, int) or not check(value) or not isfinite(value):
+                raise ValueError(f"{name}: {PARAMETER_INFO[name]}")
 
     def label(self) -> str:
         up = "as-pub" if self.upstream_reshoring is None else f"{self.upstream_reshoring:.2f}"

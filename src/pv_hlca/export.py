@@ -36,7 +36,7 @@ import time
 from pathlib import Path
 import pandas as pd
 
-from . import io, hybridize, scenarios, indicators
+from . import hybridize, indicators, pipeline
 from .params import Params
 
 
@@ -70,21 +70,10 @@ def _is_done(run_dir: Path) -> bool:
 # --------------------------------------------------------------------------- #
 # heavy-base construction (the lever-invariant prefix)
 # --------------------------------------------------------------------------- #
-def _build_base(cfg):
-    """parse -> aggregate -> add PV sectors -> calc_ghg. Invariant across all levers."""
-    db = io.parse_base_db(cfg)
-    io.aggregate_db(db, cfg)
-    hybridize.add_pv_sectors(db, cfg)
-    # single 'GHG' satellite (AR6 GWP-100) from the aggregated CO2/CH4/N2O buckets,
-    # used by the footprint and the exploded fc_ex decomposition
-    db.calc_ghg(gwp=dict(cfg["parameters"]["gwp_factors"]), label="GHG")
-    return db
-
-
 # --------------------------------------------------------------------------- #
 # indicators for one run -> tidy tables
 # --------------------------------------------------------------------------- #
-def _tables_for_run(db, cfg, p: Params, scenario_list, heavy: bool) -> dict:
+def tables_for_run(db, cfg, p: Params, scenario_list, heavy: bool = False) -> dict:
     """Compute every indicator for one fully-built run and return a dict of
     {name: DataFrame}. ``db`` must already have all scenarios built."""
     tag = p.as_dict()
@@ -176,11 +165,7 @@ def write_decomposition_data(cfg, outdir, *,
         return outdir
     t = time.time()
     _log("building central case for decomposition (parse+aggregate+add_sectors+calc_ghg+shock) ...")
-    db = _build_base(cfg)
-    hybridize.apply_solar_shock(db, cfg, "OWID")  # central case
-    hybridize.apply_module_efficiency(db, cfg, 0.195)
-    hybridize.remove_old_solar(db, cfg)
-    scenarios.build_all_scenarios(db, cfg, mix_source="WEO_STEPS", upstream_reshoring=None)
+    db = pipeline.build_database(cfg)
     for scen in scenario_list:
         if scen in db.scenarios:
             indicators.fc_ex_pv(db, scen).to_parquet(outdir / f"fc_ex_{scen}.parquet")
@@ -207,11 +192,7 @@ def write_onestep_data(cfg, outdir, *,
         return outdir
     t = time.time()
     _log("building central case for one-step decomposition ...")
-    db = _build_base(cfg)
-    hybridize.apply_solar_shock(db, cfg, "OWID")  # central case
-    hybridize.apply_module_efficiency(db, cfg, 0.195)
-    hybridize.remove_old_solar(db, cfg)
-    scenarios.build_all_scenarios(db, cfg, mix_source="WEO_STEPS", upstream_reshoring=None)
+    db = pipeline.build_database(cfg)
     for scen in scenario_list:
         if scen in db.scenarios:
             df = indicators.onestep_decomp_pv(db, cfg, scen, regions=regions)
@@ -303,7 +284,7 @@ def run_and_export(cfg, params_list, outdir, *,
             if base is None:
                 t = time.time()
                 _log("building hybrid base (parse + aggregate + add_sectors) ...")
-                base = _build_base(cfg)
+                base = pipeline.prepare_database(cfg)
                 _log(f"hybrid base ready in {_fmt(time.time() - t)}")
             if db_cf is None:
                 t = time.time()
@@ -312,18 +293,15 @@ def run_and_export(cfg, params_list, outdir, *,
                 _log(f"solar shock cf={cf} deg={deg} ready in {_fmt(time.time() - t)}")
             t = time.time()
             db = copy.deepcopy(db_cf)
-            hybridize.apply_module_efficiency(db, cfg, eff)
-            hybridize.remove_old_solar(db, cfg)
+            pipeline.apply_technology(db, cfg, eff)
             clean = copy.deepcopy(db.matrices["baseline"])
             _log(f"base cf={cf} deg={deg} eff={eff} ready in {_fmt(time.time() - t)} "
                  f"-> {len(members)} run(s)")
             for p in members:
                 t = time.time()
                 db.matrices = {"baseline": copy.deepcopy(clean)}
-                hybridize.apply_lci_variant(db, cfg, p.lci_variant)   # per-run upstream-electricity LCI
-                scenarios.build_all_scenarios(db, cfg, mix_source=p.electricity_mix,
-                                              upstream_reshoring=p.upstream_reshoring)
-                tables = _tables_for_run(db, cfg, p, scenario_list, heavy)
+                pipeline.apply_scenarios(db, cfg, p)
+                tables = tables_for_run(db, cfg, p, scenario_list, heavy)
                 _write_run(runs_dir / _run_key(p), tables, heavy)
                 n_done += 1
                 _log(f"[{n_done}/{len(todo)}] {p.label()} -> written "

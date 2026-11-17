@@ -1,0 +1,14 @@
+id: exiobase-hybrid-green-steel-1.3.2
+citation: https://doi.org/10.5281/zenodo.18744457
+revision: 70c7d5a6fe52a44c88b4df1a7c74137f9e7bf75b
+repository: it-is-me-mario/pv-hlca-model
+directory: inputs/db_from_zenodo
+lfs_files: [z.parquet]
+files:
+  EY.parquet: b0cec5415bbe0c7cd6a49d94600c8adcaf2aaa6a302fddc6bc6959403e3de72a
+  VY.parquet: d15b2c15bdda36ed67ccec3178816b68276eb6237c58e6615aee5682e48a7f34
+  Y.parquet: 7b80bd7d998416ddac5d4ec632d7ee211b6f7c644398930171ce89043e19d5c6
+  e.parquet: 1c8b47f3004e5dd1a5037d341f3f97ad0441a5a21ef51d462bbbc7373c559ae2
+  units.parquet: a90861c685e88c1971e516419ba97ba11837e301fd2400f848209202972042a9
+  v.parquet: 4b50e7f4e5f4267496f70b77d6b723f222af0c59600dcf477bac18566c3fc7dd
+  z.parquet: 5ab70f2baef1799a5e65c15736e3f72e115f388c7f91a6a5a2cbd6493f5826a8

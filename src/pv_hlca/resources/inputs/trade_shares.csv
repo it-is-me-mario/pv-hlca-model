@@ -1,0 +1,623 @@
+scenario,commodity,importer,exporter,share
+baseline,PV modules,EU27,EU27,-0.97
+baseline,PV modules,CN,EU27,0.724095041
+baseline,PV modules,WA,EU27,0.15
+baseline,PV modules,KR,EU27,0.095904959
+baseline,PV modules,US,US,-0.9
+baseline,PV modules,CN,US,0.1
+baseline,PV modules,ID,US,0.3
+baseline,PV modules,WA,US,0.5
+baseline,PV modules,BR,BR,-0.95
+baseline,PV modules,CN,BR,0.95
+baseline,PV modules,IN,IN,-0.95
+baseline,PV modules,CN,IN,0.95
+baseline,PV modules,AU,AU,-0.95
+baseline,PV modules,CN,AU,0.95
+baseline,PV modules,WF,WF,-0.95
+baseline,PV modules,CN,WF,0.95
+baseline,PV modules,ZA,ZA,-0.95
+baseline,PV modules,CN,ZA,0.95
+baseline,PV modules,WL,WL,-0.95
+baseline,PV modules,CN,WL,0.95
+baseline,PV modules,CA,CA,-0.6
+baseline,PV modules,CN,CA,0.3
+baseline,PV modules,WA,CA,0.3
+baseline,PV modules,CN,CN,1
+baseline,PV modules,CH,CH,-0.97
+baseline,PV modules,CN,CH,0.724095041
+baseline,PV modules,WA,CH,0.15
+baseline,PV modules,KR,CH,0.095904959
+baseline,PV modules,NO,NO,-0.97
+baseline,PV modules,CN,NO,0.724095041
+baseline,PV modules,WA,NO,0.15
+baseline,PV modules,KR,NO,0.095904959
+baseline,PV modules,GB,GB,-0.97
+baseline,PV modules,CN,GB,0.724095041
+baseline,PV modules,WA,GB,0.15
+baseline,PV modules,KR,GB,0.095904959
+baseline,PV modules,KR,KR,1
+baseline,PV modules,WE,WE,-0.97
+baseline,PV modules,CN,WE,0.724095041
+baseline,PV modules,WA,WE,0.15
+baseline,PV modules,KR,WE,0.095904959
+baseline,PV modules,JP,JP,-0.95
+baseline,PV modules,CN,JP,0.85
+baseline,PV modules,WA,JP,0.1
+baseline,PV modules,ID,ID,-0.8
+baseline,PV modules,CN,ID,0.8
+baseline,PV modules,MX,MX,-0.7
+baseline,PV modules,CN,MX,0.7
+baseline,PV modules,RU,RU,-0.85
+baseline,PV modules,CN,RU,0.85
+baseline,PV modules,TR,TR,-0.35
+baseline,PV modules,CN,TR,0.35
+baseline,PV modules,WM,WM,-0.75
+baseline,PV modules,CN,WM,0.75
+baseline,PV modules,WA,WA,1
+baseline,Cells,EU27,EU27,-0.98
+baseline,Cells,CN,EU27,0.65
+baseline,Cells,WA,EU27,0.25
+baseline,Cells,KR,EU27,0.08
+baseline,Cells,US,US,-0.98
+baseline,Cells,CN,US,0.05
+baseline,Cells,KR,US,0.05
+baseline,Cells,WA,US,0.88
+baseline,Cells,IN,IN,-0.85
+baseline,Cells,CN,IN,0.55
+baseline,Cells,KR,IN,0.05
+baseline,Cells,WA,IN,0.25
+baseline,Cells,ID,ID,-0.9
+baseline,Cells,CN,ID,0.6
+baseline,Cells,WA,ID,0.3
+baseline,Cells,CN,CN,-0.08
+baseline,Cells,WA,CN,0.08
+baseline,Cells,AU,AU,-0.99
+baseline,Cells,CN,AU,0.87
+baseline,Cells,WA,AU,0.12
+baseline,Cells,BR,BR,-0.99
+baseline,Cells,CN,BR,0.91
+baseline,Cells,WA,BR,0.08
+baseline,Cells,WL,WL,-0.99
+baseline,Cells,CN,WL,0.88
+baseline,Cells,WA,WL,0.11
+baseline,Cells,CA,CA,-0.97
+baseline,Cells,CN,CA,0.65
+baseline,Cells,IN,CA,0.04
+baseline,Cells,WA,CA,0.28
+baseline,Cells,JP,JP,-0.95
+baseline,Cells,CN,JP,0.65
+baseline,Cells,IN,JP,0.03
+baseline,Cells,WA,JP,0.22
+baseline,Cells,KR,JP,0.05
+baseline,Cells,KR,KR,-0.6
+baseline,Cells,CN,KR,0.46
+baseline,Cells,IN,KR,0.02
+baseline,Cells,WA,KR,0.12
+baseline,Cells,MX,MX,-0.85
+baseline,Cells,CN,MX,0.5
+baseline,Cells,IN,MX,0.08
+baseline,Cells,WA,MX,0.27
+baseline,Cells,RU,RU,-0.95
+baseline,Cells,CN,RU,0.75
+baseline,Cells,IN,RU,0.05
+baseline,Cells,WA,RU,0.12
+baseline,Cells,US,RU,0.03
+baseline,Cells,TR,TR,-0.97
+baseline,Cells,CN,TR,0.79
+baseline,Cells,WA,TR,0.13
+baseline,Cells,KR,TR,0.05
+baseline,Cells,WF,WF,-0.99
+baseline,Cells,CN,WF,0.86
+baseline,Cells,WA,WF,0.13
+baseline,Cells,ZA,ZA,-0.99
+baseline,Cells,CN,ZA,0.86
+baseline,Cells,WA,ZA,0.13
+baseline,Cells,WA,WA,-0.3
+baseline,Cells,CN,WA,0.3
+baseline,Cells,WM,WM,-0.9
+baseline,Cells,CN,WM,0.8
+baseline,Cells,WA,WM,0.05
+baseline,Cells,TR,WM,0.05
+baseline,Cells,GB,GB,-0.98
+baseline,Cells,CN,GB,0.65
+baseline,Cells,WA,GB,0.25
+baseline,Cells,KR,GB,0.08
+baseline,Cells,NO,NO,-0.98
+baseline,Cells,CN,NO,0.65
+baseline,Cells,WA,NO,0.25
+baseline,Cells,KR,NO,0.08
+baseline,Cells,WE,WE,-0.98
+baseline,Cells,CN,WE,0.65
+baseline,Cells,WA,WE,0.25
+baseline,Cells,KR,WE,0.08
+baseline,Cells,CH,CH,-0.98
+baseline,Cells,CN,CH,0.65
+baseline,Cells,WA,CH,0.25
+baseline,Cells,KR,CH,0.08
+baseline,Wafer,EU27,EU27,-0.99
+baseline,Wafer,CN,EU27,0.99
+baseline,Wafer,US,US,-0.99
+baseline,Wafer,CN,US,0.99
+baseline,Wafer,IN,IN,-0.99
+baseline,Wafer,CN,IN,0.99
+baseline,Wafer,ID,ID,-0.99
+baseline,Wafer,CN,ID,0.99
+baseline,Wafer,CN,CN,1
+baseline,Wafer,AU,AU,-0.99
+baseline,Wafer,CN,AU,0.99
+baseline,Wafer,BR,BR,-0.99
+baseline,Wafer,CN,BR,0.99
+baseline,Wafer,WL,WL,-0.99
+baseline,Wafer,CN,WL,0.99
+baseline,Wafer,CA,CA,-0.99
+baseline,Wafer,CN,CA,0.99
+baseline,Wafer,JP,JP,-0.99
+baseline,Wafer,CN,JP,0.99
+baseline,Wafer,KR,KR,-0.99
+baseline,Wafer,CN,KR,0.99
+baseline,Wafer,MX,MX,-0.99
+baseline,Wafer,CN,MX,0.99
+baseline,Wafer,RU,RU,-0.99
+baseline,Wafer,CN,RU,0.99
+baseline,Wafer,TR,TR,-0.99
+baseline,Wafer,CN,TR,0.99
+baseline,Wafer,WF,WF,-0.99
+baseline,Wafer,CN,WF,0.99
+baseline,Wafer,ZA,ZA,-0.99
+baseline,Wafer,CN,ZA,0.99
+baseline,Wafer,WA,WA,-0.99
+baseline,Wafer,CN,WA,0.99
+baseline,Wafer,WM,WM,-0.99
+baseline,Wafer,CN,WM,0.99
+baseline,Wafer,GB,GB,-0.99
+baseline,Wafer,CN,GB,0.99
+baseline,Wafer,NO,NO,-0.99
+baseline,Wafer,CN,NO,0.99
+baseline,Wafer,WE,WE,-0.99
+baseline,Wafer,CN,WE,0.99
+baseline,Wafer,CH,CH,-0.99
+baseline,Wafer,CN,CH,0.99
+baseline,Ingot,EU27,EU27,-0.99
+baseline,Ingot,CN,EU27,0.99
+baseline,Ingot,US,US,-0.99
+baseline,Ingot,CN,US,0.99
+baseline,Ingot,IN,IN,-0.99
+baseline,Ingot,CN,IN,0.99
+baseline,Ingot,ID,ID,-0.99
+baseline,Ingot,CN,ID,0.99
+baseline,Ingot,CN,CN,1
+baseline,Ingot,AU,AU,-0.99
+baseline,Ingot,CN,AU,0.99
+baseline,Ingot,BR,BR,-0.99
+baseline,Ingot,CN,BR,0.99
+baseline,Ingot,WL,WL,-0.99
+baseline,Ingot,CN,WL,0.99
+baseline,Ingot,CA,CA,-0.99
+baseline,Ingot,CN,CA,0.99
+baseline,Ingot,JP,JP,-0.99
+baseline,Ingot,CN,JP,0.99
+baseline,Ingot,KR,KR,-0.99
+baseline,Ingot,CN,KR,0.99
+baseline,Ingot,MX,MX,-0.99
+baseline,Ingot,CN,MX,0.99
+baseline,Ingot,RU,RU,-0.99
+baseline,Ingot,CN,RU,0.99
+baseline,Ingot,TR,TR,-0.99
+baseline,Ingot,CN,TR,0.99
+baseline,Ingot,WF,WF,-0.99
+baseline,Ingot,CN,WF,0.99
+baseline,Ingot,ZA,ZA,-0.99
+baseline,Ingot,CN,ZA,0.99
+baseline,Ingot,WA,WA,-0.99
+baseline,Ingot,CN,WA,0.99
+baseline,Ingot,WM,WM,-0.99
+baseline,Ingot,CN,WM,0.99
+baseline,Ingot,GB,GB,-0.99
+baseline,Ingot,CN,GB,0.99
+baseline,Ingot,NO,NO,-0.99
+baseline,Ingot,CN,NO,0.99
+baseline,Ingot,WE,WE,-0.99
+baseline,Ingot,CN,WE,0.99
+baseline,Ingot,CH,CH,-0.99
+baseline,Ingot,CN,CH,0.99
+baseline,Solar Grade silicon,CN,CN,-0.15
+baseline,Solar Grade silicon,EU27,CN,0.1
+baseline,Solar Grade silicon,WA,CN,0.05
+baseline,Solar Grade silicon,EU27,EU27,-0.5
+baseline,Solar Grade silicon,CN,EU27,0.5
+baseline,Solar Grade silicon,US,US,-0.85
+baseline,Solar Grade silicon,CN,US,0.85
+baseline,Solar Grade silicon,KR,KR,-0.5
+baseline,Solar Grade silicon,CN,KR,0.5
+baseline,Solar Grade silicon,WA,WA,-0.5
+baseline,Solar Grade silicon,CN,WA,0.5
+baseline,Solar Grade silicon,NO,NO,-0.95
+baseline,Solar Grade silicon,CN,NO,0.95
+baseline,Solar Grade silicon,JP,JP,-0.95
+baseline,Solar Grade silicon,CN,JP,0.95
+baseline,Solar Grade silicon,AU,AU,-0.99
+baseline,Solar Grade silicon,CN,AU,0.99
+baseline,Solar Grade silicon,BR,BR,-0.99
+baseline,Solar Grade silicon,CN,BR,0.99
+baseline,Solar Grade silicon,CA,CA,-0.99
+baseline,Solar Grade silicon,CN,CA,0.99
+baseline,Solar Grade silicon,CH,CH,-0.99
+baseline,Solar Grade silicon,CN,CH,0.99
+baseline,Solar Grade silicon,GB,GB,-0.99
+baseline,Solar Grade silicon,CN,GB,0.99
+baseline,Solar Grade silicon,ID,ID,-0.99
+baseline,Solar Grade silicon,CN,ID,0.99
+baseline,Solar Grade silicon,IN,IN,-0.99
+baseline,Solar Grade silicon,CN,IN,0.99
+baseline,Solar Grade silicon,MX,MX,-0.99
+baseline,Solar Grade silicon,CN,MX,0.99
+baseline,Solar Grade silicon,RU,RU,-0.99
+baseline,Solar Grade silicon,CN,RU,0.99
+baseline,Solar Grade silicon,TR,TR,-0.99
+baseline,Solar Grade silicon,CN,TR,0.99
+baseline,Solar Grade silicon,WE,WE,-0.99
+baseline,Solar Grade silicon,CN,WE,0.99
+baseline,Solar Grade silicon,WF,WF,-0.99
+baseline,Solar Grade silicon,CN,WF,0.99
+baseline,Solar Grade silicon,ZA,ZA,-0.99
+baseline,Solar Grade silicon,CN,ZA,0.99
+baseline,Solar Grade silicon,WM,WM,-0.99
+baseline,Solar Grade silicon,CN,WM,0.99
+baseline,Solar Grade silicon,WL,WL,-0.99
+baseline,Solar Grade silicon,CN,WL,0.99
+baseline,Metallurgical Grade silicon,CN,CN,-0.15
+baseline,Metallurgical Grade silicon,EU27,CN,0.1
+baseline,Metallurgical Grade silicon,WA,CN,0.05
+baseline,Metallurgical Grade silicon,EU27,EU27,-0.5
+baseline,Metallurgical Grade silicon,CN,EU27,0.5
+baseline,Metallurgical Grade silicon,US,US,-0.85
+baseline,Metallurgical Grade silicon,CN,US,0.85
+baseline,Metallurgical Grade silicon,KR,KR,-0.5
+baseline,Metallurgical Grade silicon,CN,KR,0.5
+baseline,Metallurgical Grade silicon,WA,WA,-0.5
+baseline,Metallurgical Grade silicon,CN,WA,0.5
+baseline,Metallurgical Grade silicon,NO,NO,-0.95
+baseline,Metallurgical Grade silicon,CN,NO,0.95
+baseline,Metallurgical Grade silicon,JP,JP,-0.95
+baseline,Metallurgical Grade silicon,CN,JP,0.95
+baseline,Metallurgical Grade silicon,AU,AU,-0.99
+baseline,Metallurgical Grade silicon,CN,AU,0.99
+baseline,Metallurgical Grade silicon,BR,BR,-0.99
+baseline,Metallurgical Grade silicon,CN,BR,0.99
+baseline,Metallurgical Grade silicon,CA,CA,-0.99
+baseline,Metallurgical Grade silicon,CN,CA,0.99
+baseline,Metallurgical Grade silicon,CH,CH,-0.99
+baseline,Metallurgical Grade silicon,CN,CH,0.99
+baseline,Metallurgical Grade silicon,GB,GB,-0.99
+baseline,Metallurgical Grade silicon,CN,GB,0.99
+baseline,Metallurgical Grade silicon,ID,ID,-0.99
+baseline,Metallurgical Grade silicon,CN,ID,0.99
+baseline,Metallurgical Grade silicon,IN,IN,-0.99
+baseline,Metallurgical Grade silicon,CN,IN,0.99
+baseline,Metallurgical Grade silicon,MX,MX,-0.99
+baseline,Metallurgical Grade silicon,CN,MX,0.99
+baseline,Metallurgical Grade silicon,RU,RU,-0.99
+baseline,Metallurgical Grade silicon,CN,RU,0.99
+baseline,Metallurgical Grade silicon,TR,TR,-0.99
+baseline,Metallurgical Grade silicon,CN,TR,0.99
+baseline,Metallurgical Grade silicon,WE,WE,-0.99
+baseline,Metallurgical Grade silicon,CN,WE,0.99
+baseline,Metallurgical Grade silicon,WF,WF,-0.99
+baseline,Metallurgical Grade silicon,CN,WF,0.99
+baseline,Metallurgical Grade silicon,ZA,ZA,-0.99
+baseline,Metallurgical Grade silicon,CN,ZA,0.99
+baseline,Metallurgical Grade silicon,WM,WM,-0.99
+baseline,Metallurgical Grade silicon,CN,WM,0.99
+baseline,Metallurgical Grade silicon,WL,WL,-0.99
+baseline,Metallurgical Grade silicon,CN,WL,0.99
+NZIA,PV modules,EU27,EU27,-0.6
+NZIA,PV modules,CN,EU27,0.354095041
+NZIA,PV modules,WA,EU27,0.15
+NZIA,PV modules,KR,EU27,0.095904959
+NZIA,PV modules,US,US,-0.9
+NZIA,PV modules,CN,US,0.1
+NZIA,PV modules,ID,US,0.3
+NZIA,PV modules,WA,US,0.5
+NZIA,PV modules,BR,BR,-0.95
+NZIA,PV modules,CN,BR,0.95
+NZIA,PV modules,IN,IN,-0.95
+NZIA,PV modules,CN,IN,0.95
+NZIA,PV modules,AU,AU,-0.95
+NZIA,PV modules,CN,AU,0.95
+NZIA,PV modules,WF,WF,-0.95
+NZIA,PV modules,CN,WF,0.95
+NZIA,PV modules,ZA,ZA,-0.95
+NZIA,PV modules,CN,ZA,0.95
+NZIA,PV modules,WL,WL,-0.95
+NZIA,PV modules,CN,WL,0.95
+NZIA,PV modules,CA,CA,-0.6
+NZIA,PV modules,CN,CA,0.3
+NZIA,PV modules,WA,CA,0.3
+NZIA,PV modules,CN,CN,1
+NZIA,PV modules,CH,CH,-0.97
+NZIA,PV modules,CN,CH,0.724095041
+NZIA,PV modules,WA,CH,0.15
+NZIA,PV modules,KR,CH,0.095904959
+NZIA,PV modules,NO,NO,-0.97
+NZIA,PV modules,CN,NO,0.724095041
+NZIA,PV modules,WA,NO,0.15
+NZIA,PV modules,KR,NO,0.095904959
+NZIA,PV modules,GB,GB,-0.97
+NZIA,PV modules,CN,GB,0.724095041
+NZIA,PV modules,WA,GB,0.15
+NZIA,PV modules,KR,GB,0.095904959
+NZIA,PV modules,KR,KR,1
+NZIA,PV modules,WE,WE,-0.97
+NZIA,PV modules,CN,WE,0.724095041
+NZIA,PV modules,WA,WE,0.15
+NZIA,PV modules,KR,WE,0.095904959
+NZIA,PV modules,JP,JP,-0.95
+NZIA,PV modules,CN,JP,0.85
+NZIA,PV modules,WA,JP,0.1
+NZIA,PV modules,ID,ID,-0.8
+NZIA,PV modules,CN,ID,0.8
+NZIA,PV modules,MX,MX,-0.7
+NZIA,PV modules,CN,MX,0.7
+NZIA,PV modules,RU,RU,-0.85
+NZIA,PV modules,CN,RU,0.85
+NZIA,PV modules,TR,TR,-0.35
+NZIA,PV modules,CN,TR,0.35
+NZIA,PV modules,WM,WM,-0.75
+NZIA,PV modules,CN,WM,0.75
+NZIA,PV modules,WA,WA,1
+NZIA,Cells,EU27,EU27,-0.6
+NZIA,Cells,CN,EU27,0.27
+NZIA,Cells,WA,EU27,0.25
+NZIA,Cells,KR,EU27,0.08
+NZIA,Cells,US,US,-0.98
+NZIA,Cells,CN,US,0.05
+NZIA,Cells,KR,US,0.05
+NZIA,Cells,WA,US,0.88
+NZIA,Cells,IN,IN,-0.85
+NZIA,Cells,CN,IN,0.55
+NZIA,Cells,KR,IN,0.05
+NZIA,Cells,WA,IN,0.25
+NZIA,Cells,ID,ID,-0.9
+NZIA,Cells,CN,ID,0.6
+NZIA,Cells,WA,ID,0.3
+NZIA,Cells,CN,CN,-0.08
+NZIA,Cells,WA,CN,0.08
+NZIA,Cells,AU,AU,-0.99
+NZIA,Cells,CN,AU,0.87
+NZIA,Cells,WA,AU,0.12
+NZIA,Cells,BR,BR,-0.99
+NZIA,Cells,CN,BR,0.91
+NZIA,Cells,WA,BR,0.08
+NZIA,Cells,WL,WL,-0.99
+NZIA,Cells,CN,WL,0.88
+NZIA,Cells,WA,WL,0.11
+NZIA,Cells,CA,CA,-0.97
+NZIA,Cells,CN,CA,0.65
+NZIA,Cells,IN,CA,0.04
+NZIA,Cells,WA,CA,0.28
+NZIA,Cells,JP,JP,-0.95
+NZIA,Cells,CN,JP,0.65
+NZIA,Cells,IN,JP,0.03
+NZIA,Cells,WA,JP,0.22
+NZIA,Cells,KR,JP,0.05
+NZIA,Cells,KR,KR,-0.6
+NZIA,Cells,CN,KR,0.46
+NZIA,Cells,IN,KR,0.02
+NZIA,Cells,WA,KR,0.12
+NZIA,Cells,MX,MX,-0.85
+NZIA,Cells,CN,MX,0.5
+NZIA,Cells,IN,MX,0.08
+NZIA,Cells,WA,MX,0.27
+NZIA,Cells,RU,RU,-0.95
+NZIA,Cells,CN,RU,0.75
+NZIA,Cells,IN,RU,0.05
+NZIA,Cells,WA,RU,0.12
+NZIA,Cells,US,RU,0.03
+NZIA,Cells,TR,TR,-0.97
+NZIA,Cells,CN,TR,0.79
+NZIA,Cells,WA,TR,0.13
+NZIA,Cells,KR,TR,0.05
+NZIA,Cells,WF,WF,-0.99
+NZIA,Cells,CN,WF,0.86
+NZIA,Cells,WA,WF,0.13
+NZIA,Cells,ZA,ZA,-0.99
+NZIA,Cells,CN,ZA,0.86
+NZIA,Cells,WA,ZA,0.13
+NZIA,Cells,WA,WA,-0.3
+NZIA,Cells,CN,WA,0.3
+NZIA,Cells,WM,WM,-0.9
+NZIA,Cells,CN,WM,0.8
+NZIA,Cells,WA,WM,0.05
+NZIA,Cells,TR,WM,0.05
+NZIA,Cells,GB,GB,-0.98
+NZIA,Cells,CN,GB,0.65
+NZIA,Cells,WA,GB,0.25
+NZIA,Cells,KR,GB,0.08
+NZIA,Cells,NO,NO,-0.98
+NZIA,Cells,CN,NO,0.65
+NZIA,Cells,WA,NO,0.25
+NZIA,Cells,KR,NO,0.08
+NZIA,Cells,WE,WE,-0.98
+NZIA,Cells,CN,WE,0.65
+NZIA,Cells,WA,WE,0.25
+NZIA,Cells,KR,WE,0.08
+NZIA,Cells,CH,CH,-0.98
+NZIA,Cells,CN,CH,0.65
+NZIA,Cells,WA,CH,0.25
+NZIA,Cells,KR,CH,0.08
+NZIA,Wafer,EU27,EU27,-0.6
+NZIA,Wafer,CN,EU27,0.6
+NZIA,Wafer,US,US,-0.99
+NZIA,Wafer,CN,US,0.99
+NZIA,Wafer,IN,IN,-0.99
+NZIA,Wafer,CN,IN,0.99
+NZIA,Wafer,ID,ID,-0.99
+NZIA,Wafer,CN,ID,0.99
+NZIA,Wafer,CN,CN,1
+NZIA,Wafer,AU,AU,-0.99
+NZIA,Wafer,CN,AU,0.99
+NZIA,Wafer,BR,BR,-0.99
+NZIA,Wafer,CN,BR,0.99
+NZIA,Wafer,WL,WL,-0.99
+NZIA,Wafer,CN,WL,0.99
+NZIA,Wafer,CA,CA,-0.99
+NZIA,Wafer,CN,CA,0.99
+NZIA,Wafer,JP,JP,-0.99
+NZIA,Wafer,CN,JP,0.99
+NZIA,Wafer,KR,KR,-0.99
+NZIA,Wafer,CN,KR,0.99
+NZIA,Wafer,MX,MX,-0.99
+NZIA,Wafer,CN,MX,0.99
+NZIA,Wafer,RU,RU,-0.99
+NZIA,Wafer,CN,RU,0.99
+NZIA,Wafer,TR,TR,-0.99
+NZIA,Wafer,CN,TR,0.99
+NZIA,Wafer,WF,WF,-0.99
+NZIA,Wafer,CN,WF,0.99
+NZIA,Wafer,ZA,ZA,-0.99
+NZIA,Wafer,CN,ZA,0.99
+NZIA,Wafer,WA,WA,-0.99
+NZIA,Wafer,CN,WA,0.99
+NZIA,Wafer,WM,WM,-0.99
+NZIA,Wafer,CN,WM,0.99
+NZIA,Wafer,GB,GB,-0.99
+NZIA,Wafer,CN,GB,0.99
+NZIA,Wafer,NO,NO,-0.99
+NZIA,Wafer,CN,NO,0.99
+NZIA,Wafer,WE,WE,-0.99
+NZIA,Wafer,CN,WE,0.99
+NZIA,Wafer,CH,CH,-0.99
+NZIA,Wafer,CN,CH,0.99
+NZIA,Ingot,EU27,EU27,-0.6
+NZIA,Ingot,CN,EU27,0.6
+NZIA,Ingot,US,US,-0.99
+NZIA,Ingot,CN,US,0.99
+NZIA,Ingot,IN,IN,-0.99
+NZIA,Ingot,CN,IN,0.99
+NZIA,Ingot,ID,ID,-0.99
+NZIA,Ingot,CN,ID,0.99
+NZIA,Ingot,CN,CN,1
+NZIA,Ingot,AU,AU,-0.99
+NZIA,Ingot,CN,AU,0.99
+NZIA,Ingot,BR,BR,-0.99
+NZIA,Ingot,CN,BR,0.99
+NZIA,Ingot,WL,WL,-0.99
+NZIA,Ingot,CN,WL,0.99
+NZIA,Ingot,CA,CA,-0.99
+NZIA,Ingot,CN,CA,0.99
+NZIA,Ingot,JP,JP,-0.99
+NZIA,Ingot,CN,JP,0.99
+NZIA,Ingot,KR,KR,-0.99
+NZIA,Ingot,CN,KR,0.99
+NZIA,Ingot,MX,MX,-0.99
+NZIA,Ingot,CN,MX,0.99
+NZIA,Ingot,RU,RU,-0.99
+NZIA,Ingot,CN,RU,0.99
+NZIA,Ingot,TR,TR,-0.99
+NZIA,Ingot,CN,TR,0.99
+NZIA,Ingot,WF,WF,-0.99
+NZIA,Ingot,CN,WF,0.99
+NZIA,Ingot,ZA,ZA,-0.99
+NZIA,Ingot,CN,ZA,0.99
+NZIA,Ingot,WA,WA,-0.99
+NZIA,Ingot,CN,WA,0.99
+NZIA,Ingot,WM,WM,-0.99
+NZIA,Ingot,CN,WM,0.99
+NZIA,Ingot,GB,GB,-0.99
+NZIA,Ingot,CN,GB,0.99
+NZIA,Ingot,NO,NO,-0.99
+NZIA,Ingot,CN,NO,0.99
+NZIA,Ingot,WE,WE,-0.99
+NZIA,Ingot,CN,WE,0.99
+NZIA,Ingot,CH,CH,-0.99
+NZIA,Ingot,CN,CH,0.99
+NZIA,Solar Grade silicon,CN,CN,-0.15
+NZIA,Solar Grade silicon,EU27,CN,0.1
+NZIA,Solar Grade silicon,WA,CN,0.05
+NZIA,Solar Grade silicon,EU27,EU27,-0.5
+NZIA,Solar Grade silicon,CN,EU27,0.5
+NZIA,Solar Grade silicon,US,US,-0.85
+NZIA,Solar Grade silicon,CN,US,0.85
+NZIA,Solar Grade silicon,KR,KR,-0.5
+NZIA,Solar Grade silicon,CN,KR,0.5
+NZIA,Solar Grade silicon,WA,WA,-0.5
+NZIA,Solar Grade silicon,CN,WA,0.5
+NZIA,Solar Grade silicon,NO,NO,-0.95
+NZIA,Solar Grade silicon,CN,NO,0.95
+NZIA,Solar Grade silicon,JP,JP,-0.95
+NZIA,Solar Grade silicon,CN,JP,0.95
+NZIA,Solar Grade silicon,AU,AU,-0.99
+NZIA,Solar Grade silicon,CN,AU,0.99
+NZIA,Solar Grade silicon,BR,BR,-0.99
+NZIA,Solar Grade silicon,CN,BR,0.99
+NZIA,Solar Grade silicon,CA,CA,-0.99
+NZIA,Solar Grade silicon,CN,CA,0.99
+NZIA,Solar Grade silicon,CH,CH,-0.99
+NZIA,Solar Grade silicon,CN,CH,0.99
+NZIA,Solar Grade silicon,GB,GB,-0.99
+NZIA,Solar Grade silicon,CN,GB,0.99
+NZIA,Solar Grade silicon,ID,ID,-0.99
+NZIA,Solar Grade silicon,CN,ID,0.99
+NZIA,Solar Grade silicon,IN,IN,-0.99
+NZIA,Solar Grade silicon,CN,IN,0.99
+NZIA,Solar Grade silicon,MX,MX,-0.99
+NZIA,Solar Grade silicon,CN,MX,0.99
+NZIA,Solar Grade silicon,RU,RU,-0.99
+NZIA,Solar Grade silicon,CN,RU,0.99
+NZIA,Solar Grade silicon,TR,TR,-0.99
+NZIA,Solar Grade silicon,CN,TR,0.99
+NZIA,Solar Grade silicon,WE,WE,-0.99
+NZIA,Solar Grade silicon,CN,WE,0.99
+NZIA,Solar Grade silicon,WF,WF,-0.99
+NZIA,Solar Grade silicon,CN,WF,0.99
+NZIA,Solar Grade silicon,ZA,ZA,-0.99
+NZIA,Solar Grade silicon,CN,ZA,0.99
+NZIA,Solar Grade silicon,WM,WM,-0.99
+NZIA,Solar Grade silicon,CN,WM,0.99
+NZIA,Solar Grade silicon,WL,WL,-0.99
+NZIA,Solar Grade silicon,CN,WL,0.99
+NZIA,Metallurgical Grade silicon,CN,CN,-0.15
+NZIA,Metallurgical Grade silicon,EU27,CN,0.1
+NZIA,Metallurgical Grade silicon,WA,CN,0.05
+NZIA,Metallurgical Grade silicon,EU27,EU27,-0.5
+NZIA,Metallurgical Grade silicon,CN,EU27,0.5
+NZIA,Metallurgical Grade silicon,US,US,-0.85
+NZIA,Metallurgical Grade silicon,CN,US,0.85
+NZIA,Metallurgical Grade silicon,KR,KR,-0.5
+NZIA,Metallurgical Grade silicon,CN,KR,0.5
+NZIA,Metallurgical Grade silicon,WA,WA,-0.5
+NZIA,Metallurgical Grade silicon,CN,WA,0.5
+NZIA,Metallurgical Grade silicon,NO,NO,-0.95
+NZIA,Metallurgical Grade silicon,CN,NO,0.95
+NZIA,Metallurgical Grade silicon,JP,JP,-0.95
+NZIA,Metallurgical Grade silicon,CN,JP,0.95
+NZIA,Metallurgical Grade silicon,AU,AU,-0.99
+NZIA,Metallurgical Grade silicon,CN,AU,0.99
+NZIA,Metallurgical Grade silicon,BR,BR,-0.99
+NZIA,Metallurgical Grade silicon,CN,BR,0.99
+NZIA,Metallurgical Grade silicon,CA,CA,-0.99
+NZIA,Metallurgical Grade silicon,CN,CA,0.99
+NZIA,Metallurgical Grade silicon,CH,CH,-0.99
+NZIA,Metallurgical Grade silicon,CN,CH,0.99
+NZIA,Metallurgical Grade silicon,GB,GB,-0.99
+NZIA,Metallurgical Grade silicon,CN,GB,0.99
+NZIA,Metallurgical Grade silicon,ID,ID,-0.99
+NZIA,Metallurgical Grade silicon,CN,ID,0.99
+NZIA,Metallurgical Grade silicon,IN,IN,-0.99
+NZIA,Metallurgical Grade silicon,CN,IN,0.99
+NZIA,Metallurgical Grade silicon,MX,MX,-0.99
+NZIA,Metallurgical Grade silicon,CN,MX,0.99
+NZIA,Metallurgical Grade silicon,RU,RU,-0.99
+NZIA,Metallurgical Grade silicon,CN,RU,0.99
+NZIA,Metallurgical Grade silicon,TR,TR,-0.99
+NZIA,Metallurgical Grade silicon,CN,TR,0.99
+NZIA,Metallurgical Grade silicon,WE,WE,-0.99
+NZIA,Metallurgical Grade silicon,CN,WE,0.99
+NZIA,Metallurgical Grade silicon,WF,WF,-0.99
+NZIA,Metallurgical Grade silicon,CN,WF,0.99
+NZIA,Metallurgical Grade silicon,ZA,ZA,-0.99
+NZIA,Metallurgical Grade silicon,CN,ZA,0.99
+NZIA,Metallurgical Grade silicon,WM,WM,-0.99
+NZIA,Metallurgical Grade silicon,CN,WM,0.99
+NZIA,Metallurgical Grade silicon,WL,WL,-0.99
+NZIA,Metallurgical Grade silicon,CN,WL,0.99

@@ -1,0 +1,21 @@
+model: pv-hlca
+parameters:
+  capacity_factor: OWID
+  electricity_mix: WEO_STEPS
+  module_efficiency: 0.195  # Fraction, 0.195 = 19.5%.
+  degradation_rate: 0.0    # Annual fraction.
+  lci_variant: IEA
+  upstream_reshoring: null # Preserve the reference sourcing shares for upstream stages.
+data:
+  source: exiobase-hybrid-green-steel-1.3.2
+  path: null               # Set to an existing folder containing the required Parquet files.
+inputs:
+  pv_inventory: inputs/pv_inventory
+  aggregation: inputs/aggregation
+  parameters: inputs/parameters.yaml
+  mappings: inputs/mappings.yaml
+  scenario_2030: inputs/scenario_2030.yaml
+  capacity_factor_row: inputs/capacity_factor_row.yaml
+  trade_shares: inputs/trade_shares.csv
+  capacity_factor_multipliers_owid: inputs/capacity_factor_multipliers_OWID_frozen.csv
+  capacity_factor_multipliers_rn: inputs/capacity_factor_multipliers_RN_frozen.csv

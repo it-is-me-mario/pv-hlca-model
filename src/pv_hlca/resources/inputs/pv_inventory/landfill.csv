@@ -1,0 +1,12 @@
+Quantity,Unit,Input,Item type,DB Item,DB Region,Change type,Source,Notes
+5.90909090909091e-05,tonnes,Diesel,Commodity,Gas/Diesel Oil,GLOBAL,Update,"Smith, Brittany L., et al. ""An Updated Life Cycle Assessment of Utility-Scale Solar Photovoltaic Systems Installed in the United States."" , Mar. 2024. https://doi.org/10.2172/2331447",
+3.488,MJ,"electricity, medium voltage",Commodity,Electricity,GLOBAL,Update,"Smith, Brittany L., et al. ""An Updated Life Cycle Assessment of Utility-Scale Solar Photovoltaic Systems Installed in the United States."" , Mar. 2024. https://doi.org/10.2172/2331448",
+0,MJ,"electricity, medium voltage",Commodity,Electricity,GLOBAL,Update,"Smith, Brittany L., et al. ""An Updated Life Cycle Assessment of Utility-Scale Solar Photovoltaic Systems Installed in the United States."" , Mar. 2024. https://doi.org/10.2172/2331449",-77.826
+3.495385928032121e-07,Meuro,"transport, freight, lorry",Commodity,Other land transportation services,GLOBAL,Update,"Smith, Brittany L., et al. ""An Updated Life Cycle Assessment of Utility-Scale Solar Photovoltaic Systems Installed in the United States."" , Mar. 2024. https://doi.org/10.2172/2331450",
+0.0109,tonnes (service),average incineration residue,Commodity,Inert/metal/hazardous waste for treatment: landfill,GLOBAL,Update,"Smith, Brittany L., et al. ""An Updated Life Cycle Assessment of Utility-Scale Solar Photovoltaic Systems Installed in the United States."" , Mar. 2024. https://doi.org/10.2172/2331451",
+0.19266,kg,CO2,Satellite account,Carbon dioxide,GLOBAL,Update,"Estimation, emissions related to the combustion of 2.6 MJ of diesel",
+2.6000000000000002e-05,kg,CH4,Satellite account,CH4,GLOBAL,Update,"Estimation, emissions related to the combustion of 2.6 MJ of diesel",
+1.56e-06,kg,N2O,Satellite account,N2O,GLOBAL,Update,"Estimation, emissions related to the combustion of 2.6 MJ of diesel",
+0,kg,CO2,Satellite account,Carbon dioxide,GLOBAL,Update,"Estimation, emissions related to the combustion of wastes to produce 77.826 MJ of electricity. Hp: first law electricity efficiency = 25% ",44.51647199999999
+0,kg,CH4,Satellite account,CH4,GLOBAL,Update,"Estimation, emissions related to the combustion of wastes to produce 77.826 MJ of electricity. Hp: first law electricity efficiency = 25% ",0.09339119999999998
+0,kg,N2O,Satellite account,N2O,GLOBAL,Update,"Estimation, emissions related to the combustion of wastes to produce 77.826 MJ of electricity. Hp: first law electricity efficiency = 25% ",0.001245216

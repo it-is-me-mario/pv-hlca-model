@@ -3,8 +3,7 @@
 
 # --- Base hybrid-units MRIO (EXIOBASE + H2 + green steel), pre-aggregation ---
 # Zenodo record 18744457 (https://zenodo.org/records/18744457).
-# Download the SUT coefficient parquet files (z, v, e, Y, EY, units) into this folder.
-# This folder is git-ignored (large); fetch it from Zenodo on a fresh checkout.
+# The Parquet copy in this directory uses Git LFS for the largest matrix.
 base_db:
   path: "inputs/db_from_zenodo"
   table: "SUT"
@@ -22,7 +21,7 @@ data:
   capacity_factor_multipliers_rn: "data/capacity_factor_multipliers_RN_frozen.csv"
   # Optional, machine-specific (absolute): raw EXIOBASE 3.3.18 hybrid SUT folder used
   # for the top-down benchmark. If absent/unreachable the top-down step is skipped.
-  exiobase_raw: "/Users/lorenzorinaldi/Library/CloudStorage/OneDrive-SharedLibraries-PolitecnicodiMilano/DENG-SESAM - Documenti/c-Research/a-Datasets/_Input Output Databases/EXIOBASE/3.3.18"
+  exiobase_raw: null
 
 # --- Config files ---
 config:

@@ -1,0 +1,26 @@
+Quantity,Unit,Input,Item type,DB Item,DB Region,Change type,Source,Notes
+0.05909090909090909,kg,Diesel,Commodity,Gas/Diesel Oil,GLOBAL,Update,"Smith, Brittany L., et al. ""An Updated Life Cycle Assessment of Utility-Scale Solar Photovoltaic Systems Installed in the United States."" , Mar. 2024. https://doi.org/10.2172/2331447",
+-0.61258,kg,"aluminium scrap, post-consumer",Commodity,Aluminium ores and concentrates,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+0,tonnes (service),"aluminium scrap, post-consumer",Commodity,Secondary aluminium for treatment; Re-processing of secondary aluminium into new aluminium,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+-0.072049,kg,"copper, cathode",Commodity,Copper ores and concentrates,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+0,tonnes (service),"copper, cathode",Commodity,Secondary copper for treatment; Re-processing of secondary copper into new copper,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+0.016052727272727274,kg,Diesel,Commodity,Gas/Diesel Oil,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+1.2099,kWh,"electricity, medium voltage",Commodity,Electricity,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+1.0923081025100376e-06,Meuro,"transport, freight, lorry",Commodity,Other land transportation services,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+0,MJ,"heat, district or industrial, natural gas",Commodity,Steam and hot water supply services,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),-8.8835
+0,MJ,"heat, district or industrial, other than natural gas",Commodity,Steam and hot water supply services,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),-5.7552
+-2.5942,kg,lime packed,Commodity,Cement; lime and plaster,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+-3.7496,kg,silica sand,Commodity,Sand and clay,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+-1.4824000000000002,kg,soda ash light,Commodity,Chemicals nec,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+0.0016023,tonnes (service),"waste plastic, mixture - landfill",Commodity,Plastic waste for treatment: landfill,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+0.00028013,tonnes (service),"waste plastic, mixture - incineration",Commodity,Plastic waste for treatment: incineration,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+-1.3516000000000001,kg,"Carbon dioxide, fossil",Satellite account,Carbon dioxide,GLOBAL,Update,IEA PVPS Task 12: PV Sustainability (Stolz et al. Dec. 2017),
+0.19266,kg,CO2,Satellite account,Carbon dioxide,GLOBAL,Update,"Estimation, emissions related to the combustion of 2.6 MJ of diesel",
+2.6000000000000002e-05,kg,CH4,Satellite account,CH4,GLOBAL,Update,"Estimation, emissions related to the combustion of 2.6 MJ of diesel",
+1.56e-06,kg,N2O,Satellite account,N2O,GLOBAL,Update,"Estimation, emissions related to the combustion of 2.6 MJ of diesel",
+0.052338312000000005,kg,CO2,Satellite account,Carbon dioxide,GLOBAL,Update,"Estimation, emissions related to the combustion of 0.016053 of diesel",
+7.063200000000001e-06,kg,CH4,Satellite account,CH4,GLOBAL,Update,"Estimation, emissions related to the combustion of 0.016053 of diesel",
+4.2379200000000007e-07,kg,N2O,Satellite account,N2O,GLOBAL,Update,"Estimation, emissions related to the combustion of 0.016053 of diesel",
+0,kg,CO2,Satellite account,Carbon dioxide,GLOBAL,Update,"Estimation, emissions related to the combustion of wastes to produce 9.047+5.8642 MJ of heat. Hp: first law efficiency = 90% ",2.3259267777777777
+0,kg,CH4,Satellite account,CH4,GLOBAL,Update,"Estimation, emissions related to the combustion of wastes to produce 9.047+5.8642 MJ of heat. Hp: first law efficiency = 90% ",0.004879566666666666
+0,kg,N2O,Satellite account,N2O,GLOBAL,Update,"Estimation, emissions related to the combustion of wastes to produce 9.047+5.8642 MJ of heat. Hp: first law efficiency = 90% ",6.506088888888889e-05
